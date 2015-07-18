@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerAppenderMailEvent | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li class="active"><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerAppenderConsole.html">LoggerAppenderConsole</a></li>
+				<li><a href="class-LoggerAppenderDailyFile.html">LoggerAppenderDailyFile</a></li>
+				<li><a href="class-LoggerAppenderEcho.html">LoggerAppenderEcho</a></li>
+				<li><a href="class-LoggerAppenderFile.html">LoggerAppenderFile</a></li>
+				<li><a href="class-LoggerAppenderFirePHP.html">LoggerAppenderFirePHP</a></li>
+				<li><a href="class-LoggerAppenderMail.html">LoggerAppenderMail</a></li>
+				<li class="active"><a href="class-LoggerAppenderMailEvent.html">LoggerAppenderMailEvent</a></li>
+				<li><a href="class-LoggerAppenderMongoDB.html">LoggerAppenderMongoDB</a></li>
+				<li><a href="class-LoggerAppenderNull.html">LoggerAppenderNull</a></li>
+				<li><a href="class-LoggerAppenderPDO.html">LoggerAppenderPDO</a></li>
+				<li><a href="class-LoggerAppenderPhp.html">LoggerAppenderPhp</a></li>
+				<li><a href="class-LoggerAppenderRollingFile.html">LoggerAppenderRollingFile</a></li>
+				<li><a href="class-LoggerAppenderSocket.html">LoggerAppenderSocket</a></li>
+				<li><a href="class-LoggerAppenderSyslog.html">LoggerAppenderSyslog</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.appenders.html" title="Summary of log4php\appenders"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerAppenderMailEvent</h1>
+
+
+	<div class="description">
+	
+<p>LoggerAppenderMailEvent appends individual log events via email.</p>
+
+<p>This appender is similar to LoggerAppenderMail, except that it sends each
+each log event in an individual email message at the time when it occurs.</p>
+
+<p>This appender uses a layout.</p>
+
+<h1>Configurable parameters:</h1>
+
+<ul>
+	<li><strong>to</strong> - Email address(es) to which the log will be sent.
+	Multiple email addresses may be specified by separating them with a comma.</li>
+
+	<li><strong>from</strong> - Email address which will be used in the From
+	field.</li>
+
+	<li><strong>subject</strong> - Subject of the email message.</li>
+
+	<li><strong>smtpHost</strong> - Used to override the SMTP server. Only works on
+	Windows.</li>
+
+	<li><strong>port</strong> - Used to override the default SMTP server port. Only
+	works on Windows.</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerConfigurable.html"><span>LoggerConfigurable</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-LoggerAppender.html"><span>LoggerAppender</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerAppenderMailEvent</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.appenders.html">appenders</a><br />
+
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br />
+				<b>Version:</b>
+				$Revision: 1343601 $<br />
+				<b>Link:</b>
+				<a href="http://logging.apache.org/log4php/docs/appenders/mail-event.html">Appender documentation</a><br />
+		<b>Located at</b> <a href="source-class-LoggerAppenderMailEvent.html#19-180" title="Go to source code">appenders/LoggerAppenderMailEvent.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="activateOptions" id="_activateOptions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateOptions">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#82-97" title="Go to source code">activateOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prepares the appender for logging.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepares the appender for logging.</p>
+
+<p>Derived appenders should override this method if option structure requires
+it.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerAppender.html#_activateOptions">LoggerAppender::activateOptions()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="append" id="_append">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_append">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#99-124" title="Go to source code">append</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Forwards the logging event to the destination.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Forwards the logging event to the destination.</p>
+
+<p>Derived appenders should implement this method to perform actual logging.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFrom" id="_setFrom">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFrom">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#126-129" title="Go to source code">setFrom</a>( <span>mixed <var>$from</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the 'from' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the 'from' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFrom" id="_getFrom">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFrom">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#131-134" title="Go to source code">getFrom</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the 'from' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the 'from' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPort" id="_setPort">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPort">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#136-139" title="Go to source code">setPort</a>( <span>mixed <var>$port</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the 'port' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the 'port' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPort" id="_getPort">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPort">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#141-144" title="Go to source code">getPort</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the 'port' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the 'port' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSmtpHost" id="_setSmtpHost">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSmtpHost">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#146-149" title="Go to source code">setSmtpHost</a>( <span>mixed <var>$smtpHost</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the 'smtpHost' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the 'smtpHost' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSmtpHost" id="_getSmtpHost">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSmtpHost">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#151-154" title="Go to source code">getSmtpHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the 'smtpHost' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the 'smtpHost' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSubject" id="_setSubject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSubject">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#156-159" title="Go to source code">setSubject</a>( <span>mixed <var>$subject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the 'subject' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the 'subject' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSubject" id="_getSubject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSubject">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#161-164" title="Go to source code">getSubject</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the 'subject' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the 'subject' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTo" id="_setTo">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTo">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#166-169" title="Go to source code">setTo</a>( <span>mixed <var>$to</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the 'to' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the 'to' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTo" id="_getTo">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTo">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#171-174" title="Go to source code">getTo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the 'to' parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the 'to' parameter.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDry" id="_setDry">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDry">#</a>
+		<code><a href="source-class-LoggerAppenderMailEvent.html#176-179" title="Go to source code">setDry</a>( <span>mixed <var>$dry</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables or disables dry mode.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables or disables dry mode.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerAppender.html#methods">LoggerAppender</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerAppender.html#___construct">__construct()</a>, 
+			<a href="class-LoggerAppender.html#___destruct">__destruct()</a>, 
+			<a href="class-LoggerAppender.html#_addFilter">addFilter()</a>, 
+			<a href="class-LoggerAppender.html#_clearFilters">clearFilters()</a>, 
+			<a href="class-LoggerAppender.html#_close">close()</a>, 
+			<a href="class-LoggerAppender.html#_doAppend">doAppend()</a>, 
+			<a href="class-LoggerAppender.html#_getDefaultLayout">getDefaultLayout()</a>, 
+			<a href="class-LoggerAppender.html#_getFilter">getFilter()</a>, 
+			<a href="class-LoggerAppender.html#_getFirstFilter">getFirstFilter()</a>, 
+			<a href="class-LoggerAppender.html#_getLayout">getLayout()</a>, 
+			<a href="class-LoggerAppender.html#_getName">getName()</a>, 
+			<a href="class-LoggerAppender.html#_getThreshold">getThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_isAsSevereAsThreshold">isAsSevereAsThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_requiresLayout">requiresLayout()</a>, 
+			<a href="class-LoggerAppender.html#_setLayout">setLayout()</a>, 
+			<a href="class-LoggerAppender.html#_setName">setName()</a>, 
+			<a href="class-LoggerAppender.html#_setThreshold">setThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_warn">warn()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerConfigurable.html#methods">LoggerConfigurable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerConfigurable.html#_setBoolean">setBoolean()</a>, 
+			<a href="class-LoggerConfigurable.html#_setFileSize">setFileSize()</a>, 
+			<a href="class-LoggerConfigurable.html#_setInteger">setInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setLevel">setLevel()</a>, 
+			<a href="class-LoggerConfigurable.html#_setNumeric">setNumeric()</a>, 
+			<a href="class-LoggerConfigurable.html#_setPositiveInteger">setPositiveInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setString">setString()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="from" id="$from">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMailEvent.html#45-49" title="Go to source code"><var>$from</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$from" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Email address to put in From field of the email.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Email address to put in From field of the email.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="port" id="$port">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMailEvent.html#51-55" title="Go to source code"><var>$port</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">25</span></code></td>
+		<td class="description"><div>
+			<a href="#$port" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Mail server port (widnows only).</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Mail server port (widnows only).</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtpHost" id="$smtpHost">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMailEvent.html#57-61" title="Go to source code"><var>$smtpHost</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$smtpHost" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Mail server hostname (windows only).</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Mail server hostname (windows only).</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="subject" id="$subject">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMailEvent.html#63-67" title="Go to source code"><var>$subject</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'Log4php Report'</span></code></td>
+		<td class="description"><div>
+			<a href="#$subject" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The subject of the email.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The subject of the email.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="to" id="$to">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMailEvent.html#69-73" title="Go to source code"><var>$to</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$to" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>One or more comma separated email addresses to which to send the email.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>One or more comma separated email addresses to which to send the email.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-LoggerAppender.html#properties">LoggerAppender</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerAppender.html#$closed"><var>$closed</var></a>, 
+			<a href="class-LoggerAppender.html#$filter"><var>$filter</var></a>, 
+			<a href="class-LoggerAppender.html#$layout"><var>$layout</var></a>, 
+			<a href="class-LoggerAppender.html#$name"><var>$name</var></a>, 
+			<a href="class-LoggerAppender.html#$requiresLayout"><var>$requiresLayout</var></a>, 
+			<a href="class-LoggerAppender.html#$threshold"><var>$threshold</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

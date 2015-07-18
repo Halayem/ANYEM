@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerReflectionUtils | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li class="active"><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerReflectionUtils</h1>
+
+
+	<div class="description">
+	
+<p>Provides methods for reflective use on php objects</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+		<b>Located at</b> <a href="source-class-LoggerReflectionUtils.html#21-152" title="Go to source code">LoggerReflectionUtils.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#29-37" title="Go to source code">__construct</a>( <span>object <var>$obj</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new LoggerReflectionUtils for the specified Object. This is done in
+prepartion for invoking <code><a href="class-LoggerReflectionUtils.html#_setProperty">LoggerReflectionUtils::setProperty()</a></code> one or more times.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new LoggerReflectionUtils for the specified Object. This is done in
+prepartion for invoking <code><a href="class-LoggerReflectionUtils.html#_setProperty">LoggerReflectionUtils::setProperty()</a></code> one or more times.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd><code>object</code><br>&amp;$obj the object for which to set properties</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPropertiesByObject" id="_setPropertiesByObject">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPropertiesByObject">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#49-52" title="Go to source code">setPropertiesByObject</a>( <span>mixed <var>$obj</var></span>, <span>mixed <var>$properties</var></span>, <span>mixed <var>$prefix</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setProperties" id="_setProperties">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setProperties">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#55-85" title="Go to source code">setProperties</a>( <span>array <var>$properties</var></span>, <span>string <var>$prefix</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the properites for the object that match the <code>prefix</code> passed
+as parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the properites for the object that match the <code>prefix</code> passed
+as parameter.</p>
+
+<p>Example:</p>
+
+<p>$arr['xxxname'] = 'Joe'; $arr['xxxmale'] = true; and prefix xxx causes
+setName and setMale.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>$properties An array containing keys and values.</dd>
+					<dt><var>$prefix</var></dt>
+					<dd><code>string</code><br>$prefix Only keys having the specified prefix will be set.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setProperty" id="_setProperty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setProperty">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#87-114" title="Go to source code">setProperty</a>( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a property on this PropertySetter's Object. If successful, this method
+will invoke a setter method on the underlying Object. The setter is the one for
+the specified property name and the value is determined partly from the setter
+argument type and partly from the value specified in the call to this
+method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a property on this PropertySetter's Object. If successful, this method
+will invoke a setter method on the underlying Object. The setter is the one for
+the specified property name and the value is determined partly from the setter
+argument type and partly from the value specified in the call to this
+method.</p>
+
+<p>If the setter expects a String no conversion is necessary. If it expects an
+int, then an attempt is made to convert 'value' to an int using new
+Integer(value). If the setter expects a boolean, the conversion is by new
+Boolean(value).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name name of the property</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>$value String value of the property</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="activate" id="_activate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activate">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#116-120" title="Go to source code">activate</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createObject" id="_createObject">
+
+		<td class="attributes"><code>
+			 public static
+			an
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createObject">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#122-133" title="Go to source code">createObject</a>( <span>string <var>$class</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates an instances from the given class name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates an instances from the given class name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd><code>string</code><br>$classname</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>an</code><br>object from the class with the given classname<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setter" id="_setter">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setter">#</a>
+		<code><a href="source-class-LoggerReflectionUtils.html#135-150" title="Go to source code">setter</a>( <span>object <var>$object</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd><code>object</code><br>$object</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

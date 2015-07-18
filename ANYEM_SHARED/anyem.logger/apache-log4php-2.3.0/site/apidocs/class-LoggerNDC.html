@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerNDC | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li class="active"><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerNDC</h1>
+
+
+	<div class="description">
+	
+<p>The NDC class implements <i>nested diagnostic contexts</i>.</p>
+
+<p>NDC was defined by Neil Harrison in the article "Patterns for Logging
+Diagnostic Messages" part of the book <i>"Pattern Languages of Program Design
+3"</i> edited by Martin et al.</p>
+
+<p>A Nested Diagnostic Context, or NDC in short, is an instrument to distinguish
+interleaved log output from different sources. Log output is typically
+interleaved when a server handles multiple clients near-simultaneously.</p>
+
+<p>This class is similar to the <code><a href="class-LoggerMDC.html">LoggerMDC</a></code> class except that it is based
+on a stack instead of a map.</p>
+
+<p>Interleaved log output can still be meaningful if each log entry from
+different contexts had a distinctive stamp. This is where NDCs come into
+play.</p>
+
+<p><b>Note that NDCs are managed on a per thread basis</b>.</p>
+
+<p>NDC operations such as <code><a href="class-LoggerNDC.html#_push">LoggerNDC::push()</a></code>, <code><a href="class-LoggerNDC.html#_pop">LoggerNDC::pop()</a></code>, <code><a href="class-LoggerNDC.html#_clear">LoggerNDC::clear()</a></code>, <code><a href="class-LoggerNDC.html#_getDepth">LoggerNDC::getDepth()</a></code> and <code><a href="class-LoggerNDC.html#_setMaxDepth">LoggerNDC::setMaxDepth()</a></code> affect the NDC of the <i>current</i>
+thread only. NDCs of other threads remain unaffected.</p>
+
+<p>For example, a servlet can build a per client request NDC consisting the
+clients host name and other information contained in the the request.
+<i>Cookies</i> are another source of distinctive information. To build an NDC
+one uses the <code><a href="class-LoggerNDC.html#_push">LoggerNDC::push()</a></code> operation.</p>
+
+<p>Simply put,</p>
+
+<ul>
+	<li>Contexts can be nested.</li>
+
+	<li>When entering a context, call <kbd>LoggerNDC::push()</kbd> As a side effect,
+	if there is no nested diagnostic context for the current thread, this method
+	will create it.</li>
+
+	<li>When leaving a context, call <kbd>LoggerNDC::pop()</kbd></li>
+
+	<li><b>When exiting a thread make sure to call <code><a href="class-LoggerNDC.html#_remove">LoggerNDC::remove()</a></code></b></li>
+</ul>
+
+<p>There is no penalty for forgetting to match each <kbd>push</kbd> operation
+with a corresponding <kbd>pop</kbd>, except the obvious mismatch between the
+real application context and the context set in the NDC.</p>
+
+<p>If configured to do so, LoggerPatternLayout and LoggerLayoutTTCC instances automatically retrieve the nested diagnostic context
+for the current thread without any user intervention. Hence, even if a servlet
+is serving multiple clients simultaneously, the logs emanating from the same
+code (belonging to the same category) can still be distinguished because each
+client request will have a different NDC tag.</p>
+
+<p>Example:</p>
+
+<p>{@example ../../examples/php/ndc.php 19}<br />
+</p>
+
+<p>With the properties file:</p>
+
+<p>{@example ../../examples/resources/ndc.properties 18}<br />
+</p>
+
+<p>Will result in the following (notice the conn and client ids):</p>
+
+<pre>
+2009-09-13 19:04:27 DEBUG root conn=1234: just received a new connection in src/examples/php/ndc.php at 23
+2009-09-13 19:04:27 DEBUG root conn=1234 client=ab23: some more messages that can in src/examples/php/ndc.php at 25
+2009-09-13 19:04:27 DEBUG root conn=1234 client=ab23: now related to a client in src/examples/php/ndc.php at 26
+2009-09-13 19:04:27 DEBUG root : back and waiting for new connections in src/examples/php/ndc.php at 29
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1350602 $<br />
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerNDC.html#21-203" title="Go to source code">LoggerNDC.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-LoggerNDC.html#101-111" title="Go to source code">clear</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clear any nested diagnostic information if any. This method is useful in
+cases where the same thread can be potentially used over and over in different
+unrelated contexts.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clear any nested diagnostic information if any. This method is useful in
+cases where the same thread can be potentially used over and over in different
+unrelated contexts.</p>
+
+<p>This method is equivalent to calling the <code><a href="class-LoggerNDC.html#_setMaxDepth">LoggerNDC::setMaxDepth()</a></code> method with a
+zero <var>maxDepth</var> argument.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-LoggerNDC.html#113-119" title="Go to source code">get</a>( )</code>
+
+		<div class="description short">
+			
+<p>Never use this method directly, use the <code><a href="class-LoggerLoggingEvent.html#_getNDC">LoggerLoggingEvent::getNDC()</a></code>
+method instead.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Never use this method directly, use the <code><a href="class-LoggerLoggingEvent.html#_getNDC">LoggerLoggingEvent::getNDC()</a></code>
+method instead.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDepth" id="_getDepth">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDepth">#</a>
+		<code><a href="source-class-LoggerNDC.html#121-129" title="Go to source code">getDepth</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the current nesting depth of this diagnostic context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current nesting depth of this diagnostic context.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-LoggerNDC.html#_setMaxDepth">LoggerNDC::setMaxDepth()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pop" id="_pop">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pop">#</a>
+		<code><a href="source-class-LoggerNDC.html#131-146" title="Go to source code">pop</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clients should call this method before leaving a diagnostic context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clients should call this method before leaving a diagnostic context.</p>
+
+<p>The returned value is the value that was pushed last. If no context is
+available, then the empty string "" is returned.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The innermost diagnostic context.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="peek" id="_peek">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_peek">#</a>
+		<code><a href="source-class-LoggerNDC.html#148-162" title="Go to source code">peek</a>( )</code>
+
+		<div class="description short">
+			
+<p>Looks at the last diagnostic context at the top of this NDC without removing
+it.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Looks at the last diagnostic context at the top of this NDC without removing
+it.</p>
+
+<p>The returned value is the value that was pushed last. If no context is
+available, then the empty string "" is returned.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The innermost diagnostic context.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="push" id="_push">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_push">#</a>
+		<code><a href="source-class-LoggerNDC.html#164-174" title="Go to source code">push</a>( <span>string <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Push new diagnostic context information for the current thread.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Push new diagnostic context information for the current thread.</p>
+
+<p>The contents of the <var>message</var> parameter is determined solely by the
+client.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>$message The new diagnostic context information.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code><a href="source-class-LoggerNDC.html#176-181" title="Go to source code">remove</a>( )</code>
+
+		<div class="description short">
+			
+<p>Remove the diagnostic context for this thread.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove the diagnostic context for this thread.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMaxDepth" id="_setMaxDepth">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMaxDepth">#</a>
+		<code><a href="source-class-LoggerNDC.html#183-202" title="Go to source code">setMaxDepth</a>( <span>integer <var>$maxDepth</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set maximum depth of this diagnostic context. If the current depth is smaller
+or equal to <var>maxDepth</var>, then no action is taken.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set maximum depth of this diagnostic context. If the current depth is smaller
+or equal to <var>maxDepth</var>, then no action is taken.</p>
+
+<p>This method is a convenient alternative to multiple <code><a href="class-LoggerNDC.html#_pop">LoggerNDC::pop()</a></code> calls.
+Moreover, it is often the case that at the end of complex call sequences, the
+depth of the NDC is unpredictable. The <code><a href="class-LoggerNDC.html#_setMaxDepth">LoggerNDC::setMaxDepth()</a></code> method circumvents
+this problem.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$maxDepth</var></dt>
+					<dd><code>integer</code><br>$maxDepth</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-LoggerNDC.html#_getDepth">LoggerNDC::getDepth()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

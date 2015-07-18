@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerLevel | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li class="active"><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerLevel</h1>
+
+
+	<div class="description">
+	
+<p>Defines the minimum set of levels recognized by the system, that is
+<i>OFF</i>, <i>FATAL</i>, <i>ERROR</i>, <i>WARN</i>, <i>INFO</i>, <i>DEBUG</i>
+and <i>ALL</i>.</p>
+
+<p>The <i>LoggerLevel</i> class may be subclassed to define a larger level
+set.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1379729 $<br />
+				<b>Since:</b>
+				0.5<br />
+		<b>Located at</b> <a href="source-class-LoggerLevel.html#21-256" title="Go to source code">LoggerLevel.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="equals" id="_equals">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_equals">#</a>
+		<code><a href="source-class-LoggerLevel.html#73-87" title="Go to source code">equals</a>( <span>LoggerLevels <var>$other</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compares two logger levels.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compares two logger levels.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$other</var></dt>
+					<dd><code>LoggerLevels</code><br>$other</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelOff" id="_getLevelOff">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelOff">#</a>
+		<code><a href="source-class-LoggerLevel.html#89-98" title="Go to source code">getLevelOff</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns an Off Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an Off Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelFatal" id="_getLevelFatal">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelFatal">#</a>
+		<code><a href="source-class-LoggerLevel.html#100-109" title="Go to source code">getLevelFatal</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a Fatal Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a Fatal Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelError" id="_getLevelError">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelError">#</a>
+		<code><a href="source-class-LoggerLevel.html#111-120" title="Go to source code">getLevelError</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns an Error Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an Error Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelWarn" id="_getLevelWarn">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelWarn">#</a>
+		<code><a href="source-class-LoggerLevel.html#122-131" title="Go to source code">getLevelWarn</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a Warn Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a Warn Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelInfo" id="_getLevelInfo">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelInfo">#</a>
+		<code><a href="source-class-LoggerLevel.html#133-142" title="Go to source code">getLevelInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns an Info Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an Info Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelDebug" id="_getLevelDebug">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelDebug">#</a>
+		<code><a href="source-class-LoggerLevel.html#144-153" title="Go to source code">getLevelDebug</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a Debug Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a Debug Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelTrace" id="_getLevelTrace">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelTrace">#</a>
+		<code><a href="source-class-LoggerLevel.html#155-164" title="Go to source code">getLevelTrace</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns a Trace Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a Trace Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevelAll" id="_getLevelAll">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevelAll">#</a>
+		<code><a href="source-class-LoggerLevel.html#166-175" title="Go to source code">getLevelAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns an All Level</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an All Level</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSyslogEquivalent" id="_getSyslogEquivalent">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSyslogEquivalent">#</a>
+		<code><a href="source-class-LoggerLevel.html#177-183" title="Go to source code">getSyslogEquivalent</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the syslog equivalent of this level as an integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the syslog equivalent of this level as an integer.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isGreaterOrEqual" id="_isGreaterOrEqual">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isGreaterOrEqual">#</a>
+		<code><a href="source-class-LoggerLevel.html#185-195" title="Go to source code">isGreaterOrEqual</a>( <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$other</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns <i>true</i> if this level has a higher or equal level than the level
+passed as argument, <i>false</i> otherwise.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns <i>true</i> if this level has a higher or equal level than the level
+passed as argument, <i>false</i> otherwise.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$other</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br>$other</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toString" id="_toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toString">#</a>
+		<code><a href="source-class-LoggerLevel.html#197-203" title="Go to source code">toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the string representation of this level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the string representation of this level.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-LoggerLevel.html#205-211" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the string representation of this level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the string representation of this level.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toInt" id="_toInt">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toInt">#</a>
+		<code><a href="source-class-LoggerLevel.html#213-219" title="Go to source code">toInt</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the integer representation of this level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the integer representation of this level.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toLevel" id="_toLevel">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toLevel">#</a>
+		<code><a href="source-class-LoggerLevel.html#221-255" title="Go to source code">toLevel</a>( <span>mixed <var>$arg</var></span>, <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$defaultLevel</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert the input argument to a level. If the conversion fails, then this
+method returns the provided default level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert the input argument to a level. If the conversion fails, then this
+method returns the provided default level.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arg</var></dt>
+					<dd><code>mixed</code><br>$arg The value to convert to level.</dd>
+					<dt><var>$defaultLevel</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br>$default Value to return if conversion is not possible.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="OFF" id="OFF">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#36" title="Go to source code"><b>OFF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2147483647</span></code></td>
+		<td class="description"><div>
+			<a href="#OFF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FATAL" id="FATAL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#37" title="Go to source code"><b>FATAL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">50000</span></code></td>
+		<td class="description"><div>
+			<a href="#FATAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR" id="ERROR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#38" title="Go to source code"><b>ERROR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">40000</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="WARN" id="WARN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#39" title="Go to source code"><b>WARN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">30000</span></code></td>
+		<td class="description"><div>
+			<a href="#WARN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INFO" id="INFO">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#40" title="Go to source code"><b>INFO</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">20000</span></code></td>
+		<td class="description"><div>
+			<a href="#INFO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEBUG" id="DEBUG">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#41" title="Go to source code"><b>DEBUG</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">10000</span></code></td>
+		<td class="description"><div>
+			<a href="#DEBUG" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TRACE" id="TRACE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#42" title="Go to source code"><b>TRACE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">5000</span></code></td>
+		<td class="description"><div>
+			<a href="#TRACE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ALL" id="ALL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLevel.html#43" title="Go to source code"><b>ALL</b></a>
+		</code></td>
+		<td class="value"><code>-<span class="php-num">2147483647</span></code></td>
+		<td class="description"><div>
+			<a href="#ALL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

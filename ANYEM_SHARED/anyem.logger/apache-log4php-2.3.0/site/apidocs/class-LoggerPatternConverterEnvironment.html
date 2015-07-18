@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerPatternConverterEnvironment | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li class="active"><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerPatternConverterClass.html">LoggerPatternConverterClass</a></li>
+				<li><a href="class-LoggerPatternConverterCookie.html">LoggerPatternConverterCookie</a></li>
+				<li><a href="class-LoggerPatternConverterDate.html">LoggerPatternConverterDate</a></li>
+				<li class="active"><a href="class-LoggerPatternConverterEnvironment.html">LoggerPatternConverterEnvironment</a></li>
+				<li><a href="class-LoggerPatternConverterFile.html">LoggerPatternConverterFile</a></li>
+				<li><a href="class-LoggerPatternConverterLevel.html">LoggerPatternConverterLevel</a></li>
+				<li><a href="class-LoggerPatternConverterLine.html">LoggerPatternConverterLine</a></li>
+				<li><a href="class-LoggerPatternConverterLiteral.html">LoggerPatternConverterLiteral</a></li>
+				<li><a href="class-LoggerPatternConverterLocation.html">LoggerPatternConverterLocation</a></li>
+				<li><a href="class-LoggerPatternConverterLogger.html">LoggerPatternConverterLogger</a></li>
+				<li><a href="class-LoggerPatternConverterMDC.html">LoggerPatternConverterMDC</a></li>
+				<li><a href="class-LoggerPatternConverterMessage.html">LoggerPatternConverterMessage</a></li>
+				<li><a href="class-LoggerPatternConverterMethod.html">LoggerPatternConverterMethod</a></li>
+				<li><a href="class-LoggerPatternConverterNDC.html">LoggerPatternConverterNDC</a></li>
+				<li><a href="class-LoggerPatternConverterNewLine.html">LoggerPatternConverterNewLine</a></li>
+				<li><a href="class-LoggerPatternConverterProcess.html">LoggerPatternConverterProcess</a></li>
+				<li><a href="class-LoggerPatternConverterRelative.html">LoggerPatternConverterRelative</a></li>
+				<li><a href="class-LoggerPatternConverterRequest.html">LoggerPatternConverterRequest</a></li>
+				<li><a href="class-LoggerPatternConverterServer.html">LoggerPatternConverterServer</a></li>
+				<li><a href="class-LoggerPatternConverterSession.html">LoggerPatternConverterSession</a></li>
+				<li><a href="class-LoggerPatternConverterSessionID.html">LoggerPatternConverterSessionID</a></li>
+				<li><a href="class-LoggerPatternConverterSuperglobal.html">LoggerPatternConverterSuperglobal</a></li>
+				<li><a href="class-LoggerPatternConverterThrowable.html">LoggerPatternConverterThrowable</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.pattern.html" title="Summary of log4php\pattern"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerPatternConverterEnvironment</h1>
+
+
+	<div class="description">
+	
+<p>Returns a value from the $_ENV superglobal array corresponding to the given
+key.</p>
+
+<p>Options: [0] $_ENV key value</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerPatternConverter.html"><span>LoggerPatternConverter</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-LoggerPatternConverterSuperglobal.html"><span>LoggerPatternConverterSuperglobal</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerPatternConverterEnvironment</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.pattern.html">pattern</a><br />
+
+				<b>Version:</b>
+				$Revision: 1326626 $<br />
+				<b>Since:</b>
+				2.3<br />
+		<b>Located at</b> <a href="source-class-LoggerPatternConverterEnvironment.html#21-35" title="Go to source code">pattern/LoggerPatternConverterEnvironment.php</a><br />
+	</div>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerPatternConverterSuperglobal.html#methods">LoggerPatternConverterSuperglobal</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerPatternConverterSuperglobal.html#_activateOptions">activateOptions()</a>, 
+			<a href="class-LoggerPatternConverterSuperglobal.html#_convert">convert()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerPatternConverter.html#methods">LoggerPatternConverter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerPatternConverter.html#___construct">__construct()</a>, 
+			<a href="class-LoggerPatternConverter.html#_format">format()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="name" id="$name">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerPatternConverterEnvironment.html#34" title="Go to source code"><var>$name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'_ENV'</span></code></td>
+		<td class="description"><div>
+			<a href="#$name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Name of the superglobal variable, to be defined by subclasses. For example:
+"_SERVER" or "_ENV".</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Name of the superglobal variable, to be defined by subclasses. For example:
+"_SERVER" or "_ENV".</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-LoggerPatternConverterSuperglobal.html#properties">LoggerPatternConverterSuperglobal</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerPatternConverterSuperglobal.html#$value"><var>$value</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-LoggerPatternConverter.html#properties">LoggerPatternConverter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerPatternConverter.html#$formattingInfo"><var>$formattingInfo</var></a>, 
+			<a href="class-LoggerPatternConverter.html#$next"><var>$next</var></a>, 
+			<a href="class-LoggerPatternConverter.html#$option"><var>$option</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

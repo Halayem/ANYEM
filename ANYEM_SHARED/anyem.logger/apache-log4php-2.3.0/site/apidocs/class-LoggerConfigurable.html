@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerConfigurable | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li class="active"><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerConfigurable</h1>
+
+
+	<div class="description">
+	
+<p>A base class from which all classes which have configurable properties are
+extended. Provides a generic setter with integrated validation.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-LoggerAppender.html">LoggerAppender</a>, 
+			<a href="class-LoggerFilter.html">LoggerFilter</a>, 
+			<a href="class-LoggerLayout.html">LoggerLayout</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-LoggerAppenderConsole.html">LoggerAppenderConsole</a>, 
+			<a href="class-LoggerAppenderDailyFile.html">LoggerAppenderDailyFile</a>, 
+			<a href="class-LoggerAppenderPhp.html">LoggerAppenderPhp</a>, 
+			<a href="class-LoggerAppenderRollingFile.html">LoggerAppenderRollingFile</a>, 
+			<a href="class-LoggerAppenderSocket.html">LoggerAppenderSocket</a>, 
+			<a href="class-LoggerAppenderSyslog.html">LoggerAppenderSyslog</a>, 
+			<a href="class-LoggerFilterDenyAll.html">LoggerFilterDenyAll</a>, 
+			<a href="class-LoggerFilterLevelMatch.html">LoggerFilterLevelMatch</a>, 
+			<a href="class-LoggerFilterLevelRange.html">LoggerFilterLevelRange</a>, 
+			<a href="class-LoggerFilterStringMatch.html">LoggerFilterStringMatch</a>, 
+			<a href="class-LoggerLayoutHtml.html">LoggerLayoutHtml</a>, 
+			<a href="class-LoggerLayoutPattern.html">LoggerLayoutPattern</a>, 
+			<a href="class-LoggerAppenderEcho.html">LoggerAppenderEcho</a>, 
+			<a href="class-LoggerLayoutSerialized.html">LoggerLayoutSerialized</a>, 
+			<a href="class-LoggerLayoutSimple.html">LoggerLayoutSimple</a>, 
+			<a href="class-LoggerLayoutXml.html">LoggerLayoutXml</a>, 
+			<a href="class-LoggerAppenderFile.html">LoggerAppenderFile</a>, 
+			<a href="class-LoggerAppenderFirePHP.html">LoggerAppenderFirePHP</a>, 
+			<a href="class-LoggerAppenderMail.html">LoggerAppenderMail</a>, 
+			<a href="class-LoggerAppenderMailEvent.html">LoggerAppenderMailEvent</a>, 
+			<a href="class-LoggerAppenderMongoDB.html">LoggerAppenderMongoDB</a>, 
+			<a href="class-LoggerAppenderNull.html">LoggerAppenderNull</a>, 
+			<a href="class-LoggerAppenderPDO.html">LoggerAppenderPDO</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br />
+				<b>Version:</b>
+				$Revision $<br />
+				<b>Since:</b>
+				2.2<br />
+		<b>Located at</b> <a href="source-class-LoggerConfigurable.html#21-116" title="Go to source code">LoggerConfigurable.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="setBoolean" id="_setBoolean">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBoolean">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#32-40" title="Go to source code">setBoolean</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for boolean type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for boolean type.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setInteger" id="_setInteger">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setInteger">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#42-50" title="Go to source code">setInteger</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for integer type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for integer type.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLevel" id="_setLevel">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLevel">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#52-60" title="Go to source code">setLevel</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for LoggerLevel values.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for LoggerLevel values.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPositiveInteger" id="_setPositiveInteger">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPositiveInteger">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#62-70" title="Go to source code">setPositiveInteger</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for integer type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for integer type.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFileSize" id="_setFileSize">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFileSize">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#72-80" title="Go to source code">setFileSize</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter for file size.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter for file size.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setNumeric" id="_setNumeric">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setNumeric">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#82-90" title="Go to source code">setNumeric</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for numeric type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for numeric type.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setString" id="_setString">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setString">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#92-109" title="Go to source code">setString</a>( <span>mixed <var>$property</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$nullable</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Setter function for string type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setter function for string type.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="warn" id="_warn">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_warn">#</a>
+		<code><a href="source-class-LoggerConfigurable.html#111-115" title="Go to source code">warn</a>( <span>mixed <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Triggers a warning.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Triggers a warning.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

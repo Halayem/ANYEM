@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerAppenderMongoDB | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li class="active"><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerAppenderConsole.html">LoggerAppenderConsole</a></li>
+				<li><a href="class-LoggerAppenderDailyFile.html">LoggerAppenderDailyFile</a></li>
+				<li><a href="class-LoggerAppenderEcho.html">LoggerAppenderEcho</a></li>
+				<li><a href="class-LoggerAppenderFile.html">LoggerAppenderFile</a></li>
+				<li><a href="class-LoggerAppenderFirePHP.html">LoggerAppenderFirePHP</a></li>
+				<li><a href="class-LoggerAppenderMail.html">LoggerAppenderMail</a></li>
+				<li><a href="class-LoggerAppenderMailEvent.html">LoggerAppenderMailEvent</a></li>
+				<li class="active"><a href="class-LoggerAppenderMongoDB.html">LoggerAppenderMongoDB</a></li>
+				<li><a href="class-LoggerAppenderNull.html">LoggerAppenderNull</a></li>
+				<li><a href="class-LoggerAppenderPDO.html">LoggerAppenderPDO</a></li>
+				<li><a href="class-LoggerAppenderPhp.html">LoggerAppenderPhp</a></li>
+				<li><a href="class-LoggerAppenderRollingFile.html">LoggerAppenderRollingFile</a></li>
+				<li><a href="class-LoggerAppenderSocket.html">LoggerAppenderSocket</a></li>
+				<li><a href="class-LoggerAppenderSyslog.html">LoggerAppenderSyslog</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.appenders.html" title="Summary of log4php\appenders"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerAppenderMongoDB</h1>
+
+
+	<div class="description">
+	
+<p>Appender for writing to MongoDB.</p>
+
+<p>This class was originally contributed by Vladimir Gorej.</p>
+
+<h1>Configurable parameters:</h1>
+
+<ul>
+	<li><strong>host</strong> - Server on which mongodb instance is located.</li>
+
+	<li><strong>port</strong> - Port on which the instance is bound.</li>
+
+	<li><strong>databaseName</strong> - Name of the database to which to log.</li>
+
+	<li><strong>collectionName</strong> - Name of the target collection within the
+	given database.</li>
+
+	<li><strong>username</strong> - Username used to connect to the database.</li>
+
+	<li><strong>password</strong> - Password used to connect to the database.</li>
+
+	<li><strong>timeout</strong> - For how long the driver should try to connect to
+	the database (in milliseconds).</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerConfigurable.html"><span>LoggerConfigurable</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-LoggerAppender.html"><span>LoggerAppender</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerAppenderMongoDB</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.appenders.html">appenders</a><br />
+
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br />
+				<b>Version:</b>
+				$Revision: 1346363 $<br />
+				<b>Since:</b>
+				2.1<br />
+				<b>Link:</b>
+				<a href="http://logging.apache.org/log4php/docs/appenders/mongodb.html">Appender documentation</a><br />
+				<b>Link:</b>
+				<a href="http://github.com/log4mongo/log4mongo-php">Vladimir Gorej&#039;s original submission.</a><br />
+				<b>Link:</b>
+				<a href="http://www.mongodb.org/">MongoDB website.</a><br />
+		<b>Located at</b> <a href="source-class-LoggerAppenderMongoDB.html#19-360" title="Go to source code">appenders/LoggerAppenderMongoDB.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#108-116" title="Go to source code">__construct</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Default constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Default constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Appender name</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerAppender.html#___construct">LoggerAppender::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="activateOptions" id="_activateOptions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateOptions">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#118-144" title="Go to source code">activateOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Setup db connection. Based on defined options, this method connects to the
+database and creates a <code><a href="class-LoggerAppenderMongoDB.html#$collection">LoggerAppenderMongoDB::<var>$collection</var></a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Setup db connection. Based on defined options, this method connects to the
+database and creates a <code><a href="class-LoggerAppenderMongoDB.html#$collection">LoggerAppenderMongoDB::<var>$collection</var></a></code>.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerAppender.html#_activateOptions">LoggerAppender::activateOptions()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="append" id="_append">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_append">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#146-159" title="Go to source code">append</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Appends a new event to the mongo database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Appends a new event to the mongo database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="_format">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#161-193" title="Go to source code">format</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts the logging event into an array which can be logged to mongodb.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts the logging event into an array which can be logged to mongodb.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>The array representation of the logging event.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatThrowable" id="_formatThrowable">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_formatThrowable">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#195-215" title="Go to source code">formatThrowable</a>( <span>Exception <var>$ex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts an Exception into an array which can be logged to mongodb.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts an Exception into an array which can be logged to mongodb.</p>
+
+<p>Supports innner exceptions (PHP &gt;= 5.3)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ex</var></dt>
+					<dd><code>Exception</code><br>$ex</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#217-229" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Closes the connection to the logging database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Closes the connection to the logging database</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerAppender.html#_close">LoggerAppender::close()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHost" id="_setHost">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHost">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#231-240" title="Go to source code">setHost</a>( <span>string <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>string</code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHost" id="_getHost">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHost">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#242-248" title="Go to source code">getHost</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPort" id="_setPort">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPort">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#250-256" title="Go to source code">setPort</a>( <span>integer <var>$port</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$port</var></dt>
+					<dd><code>integer</code><br>$port</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPort" id="_getPort">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPort">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#258-264" title="Go to source code">getPort</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDatabaseName" id="_setDatabaseName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDatabaseName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#266-272" title="Go to source code">setDatabaseName</a>( <span>string <var>$databaseName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$databaseName</var></dt>
+					<dd><code>string</code><br>$databaseName</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDatabaseName" id="_getDatabaseName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDatabaseName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#274-280" title="Go to source code">getDatabaseName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCollectionName" id="_setCollectionName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCollectionName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#282-288" title="Go to source code">setCollectionName</a>( <span>string <var>$collectionName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$collectionName</var></dt>
+					<dd><code>string</code><br>$collectionName</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCollectionName" id="_getCollectionName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCollectionName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#290-296" title="Go to source code">getCollectionName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUserName" id="_setUserName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUserName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#298-304" title="Go to source code">setUserName</a>( <span>string <var>$userName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$userName">LoggerAppenderMongoDB::<var>$userName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$userName">LoggerAppenderMongoDB::<var>$userName</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$userName</var></dt>
+					<dd><code>string</code><br>$userName</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUserName" id="_getUserName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUserName">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#306-312" title="Go to source code">getUserName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$userName">LoggerAppenderMongoDB::<var>$userName</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$userName">LoggerAppenderMongoDB::<var>$userName</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPassword" id="_setPassword">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPassword">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#314-320" title="Go to source code">setPassword</a>( <span>string <var>$password</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$password">LoggerAppenderMongoDB::<var>$password</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$password">LoggerAppenderMongoDB::<var>$password</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$password</var></dt>
+					<dd><code>string</code><br>$password</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPassword" id="_getPassword">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPassword">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#322-328" title="Go to source code">getPassword</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$password">LoggerAppenderMongoDB::<var>$password</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$password">LoggerAppenderMongoDB::<var>$password</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTimeout" id="_setTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTimeout">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#330-336" title="Go to source code">setTimeout</a>( <span>integer <var>$timeout</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the value of <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code> parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$timeout</var></dt>
+					<dd><code>integer</code><br>$timeout</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimeout" id="_getTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimeout">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#338-344" title="Go to source code">getTimeout</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value of <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 public 
+			Mongo
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#345-351" title="Go to source code">getConnection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the mongodb connection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the mongodb connection.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Mongo</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCollection" id="_getCollection">
+
+		<td class="attributes"><code>
+			 public 
+			MongoCollection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCollection">#</a>
+		<code><a href="source-class-LoggerAppenderMongoDB.html#353-359" title="Go to source code">getCollection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the active mongodb collection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the active mongodb collection.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MongoCollection</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerAppender.html#methods">LoggerAppender</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerAppender.html#___destruct">__destruct()</a>, 
+			<a href="class-LoggerAppender.html#_addFilter">addFilter()</a>, 
+			<a href="class-LoggerAppender.html#_clearFilters">clearFilters()</a>, 
+			<a href="class-LoggerAppender.html#_doAppend">doAppend()</a>, 
+			<a href="class-LoggerAppender.html#_getDefaultLayout">getDefaultLayout()</a>, 
+			<a href="class-LoggerAppender.html#_getFilter">getFilter()</a>, 
+			<a href="class-LoggerAppender.html#_getFirstFilter">getFirstFilter()</a>, 
+			<a href="class-LoggerAppender.html#_getLayout">getLayout()</a>, 
+			<a href="class-LoggerAppender.html#_getName">getName()</a>, 
+			<a href="class-LoggerAppender.html#_getThreshold">getThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_isAsSevereAsThreshold">isAsSevereAsThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_requiresLayout">requiresLayout()</a>, 
+			<a href="class-LoggerAppender.html#_setLayout">setLayout()</a>, 
+			<a href="class-LoggerAppender.html#_setName">setName()</a>, 
+			<a href="class-LoggerAppender.html#_setThreshold">setThreshold()</a>, 
+			<a href="class-LoggerAppender.html#_warn">warn()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerConfigurable.html#methods">LoggerConfigurable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerConfigurable.html#_setBoolean">setBoolean()</a>, 
+			<a href="class-LoggerConfigurable.html#_setFileSize">setFileSize()</a>, 
+			<a href="class-LoggerConfigurable.html#_setInteger">setInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setLevel">setLevel()</a>, 
+			<a href="class-LoggerConfigurable.html#_setNumeric">setNumeric()</a>, 
+			<a href="class-LoggerConfigurable.html#_setPositiveInteger">setPositiveInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setString">setString()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DEFAULT_MONGO_URL_PREFIX" id="DEFAULT_MONGO_URL_PREFIX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#49-50" title="Go to source code"><b>DEFAULT_MONGO_URL_PREFIX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'mongodb://'</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_MONGO_URL_PREFIX" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default prefix for the <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code>.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default prefix for the <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code>.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEFAULT_MONGO_HOST" id="DEFAULT_MONGO_HOST">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#52-53" title="Go to source code"><b>DEFAULT_MONGO_HOST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'localhost'</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_MONGO_HOST" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code>, without a prefix.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$host">LoggerAppenderMongoDB::<var>$host</var></a></code>, without a prefix.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEFAULT_MONGO_PORT" id="DEFAULT_MONGO_PORT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#55-56" title="Go to source code"><b>DEFAULT_MONGO_PORT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">27017</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_MONGO_PORT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code></p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$port">LoggerAppenderMongoDB::<var>$port</var></a></code></p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEFAULT_DB_NAME" id="DEFAULT_DB_NAME">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#58-59" title="Go to source code"><b>DEFAULT_DB_NAME</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'log4php_mongodb'</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_DB_NAME" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code></p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$databaseName">LoggerAppenderMongoDB::<var>$databaseName</var></a></code></p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEFAULT_COLLECTION_NAME" id="DEFAULT_COLLECTION_NAME">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#61-62" title="Go to source code"><b>DEFAULT_COLLECTION_NAME</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'logs'</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_COLLECTION_NAME" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code></p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$collectionName">LoggerAppenderMongoDB::<var>$collectionName</var></a></code></p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DEFAULT_TIMEOUT_VALUE" id="DEFAULT_TIMEOUT_VALUE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerAppenderMongoDB.html#64-65" title="Go to source code"><b>DEFAULT_TIMEOUT_VALUE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">3000</span></code></td>
+		<td class="description"><div>
+			<a href="#DEFAULT_TIMEOUT_VALUE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code></p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default value for <code><a href="class-LoggerAppenderMongoDB.html#$timeout">LoggerAppenderMongoDB::<var>$timeout</var></a></code></p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="host" id="$host">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#71-72" title="Go to source code"><var>$host</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$host" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Server on which mongodb instance is located.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Server on which mongodb instance is located.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="port" id="$port">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#74-75" title="Go to source code"><var>$port</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$port" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Port on which the instance is bound.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Port on which the instance is bound.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="databaseName" id="$databaseName">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#77-78" title="Go to source code"><var>$databaseName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$databaseName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Name of the database to which to log.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Name of the database to which to log.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="collectionName" id="$collectionName">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#80-81" title="Go to source code"><var>$collectionName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$collectionName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Name of the collection within the given database.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Name of the collection within the given database.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="userName" id="$userName">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#83-84" title="Go to source code"><var>$userName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$userName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Username used to connect to the database.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Username used to connect to the database.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="password" id="$password">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#86-87" title="Go to source code"><var>$password</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$password" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Password used to connect to the database.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Password used to connect to the database.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timeout" id="$timeout">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#89-90" title="Go to source code"><var>$timeout</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$timeout" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Timeout value used when connecting to the database (in milliseconds).</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Timeout value used when connecting to the database (in milliseconds).</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="connection" id="$connection">
+		<td class="attributes"><code>
+			protected  
+			Mongo
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#96-100" title="Go to source code"><var>$connection</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$connection" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Connection to the MongoDB instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Connection to the MongoDB instance.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="collection" id="$collection">
+		<td class="attributes"><code>
+			protected  
+			MongoCollection
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppenderMongoDB.html#102-106" title="Go to source code"><var>$collection</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$collection" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The collection to which log is written.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The collection to which log is written.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-LoggerAppender.html#properties">LoggerAppender</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerAppender.html#$closed"><var>$closed</var></a>, 
+			<a href="class-LoggerAppender.html#$filter"><var>$filter</var></a>, 
+			<a href="class-LoggerAppender.html#$layout"><var>$layout</var></a>, 
+			<a href="class-LoggerAppender.html#$name"><var>$name</var></a>, 
+			<a href="class-LoggerAppender.html#$requiresLayout"><var>$requiresLayout</var></a>, 
+			<a href="class-LoggerAppender.html#$threshold"><var>$threshold</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

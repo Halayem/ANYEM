@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerOptionConverter | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li class="active"><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></li>
+				<li class="active"><a href="class-LoggerOptionConverter.html">LoggerOptionConverter</a></li>
+				<li><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></li>
+				<li><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></li>
+				<li><a href="class-LoggerUtils.html">LoggerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.helpers.html" title="Summary of log4php\helpers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerOptionConverter</h1>
+
+
+	<div class="description">
+	
+<p>A convenience class to convert property values to specific types.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.helpers.html">helpers</a><br />
+
+				<b>Version:</b>
+				$Revision: 1374617 $<br />
+				<b>Since:</b>
+				0.5<br />
+		<b>Located at</b> <a href="source-class-LoggerOptionConverter.html#21-226" title="Go to source code">helpers/LoggerOptionConverter.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getSystemProperty" id="_getSystemProperty">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSystemProperty">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#43-66" title="Go to source code">getSystemProperty</a>( <span>string <var>$key</var></span>, <span>string <var>$def</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read a predefined var.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read a predefined var.</p>
+
+<p>It returns a value referenced by <var>$key</var> using this search
+criteria:</p>
+
+<ul>
+	<li>if <var>$key</var> is a constant then return it. Else</li>
+
+	<li>if <var>$key</var> is set in <var>$_ENV</var> then return it. Else</li>
+
+	<li>return <var>$def</var>.</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key The key to search for.</dd>
+					<dt><var>$def</var></dt>
+					<dd><code>string</code><br>$def The default value to return.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the string value of the system property, or the default value if there is no
+property with that key.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toBooleanEx" id="_toBooleanEx">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toBooleanEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#68-84" title="Go to source code">toBooleanEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts $value to boolean, or throws an exception if not possible.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts $value to boolean, or throws an exception if not possible.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toIntegerEx" id="_toIntegerEx">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toIntegerEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#86-99" title="Go to source code">toIntegerEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts $value to integer, or throws an exception if not possible. Floats
+cannot be converted to integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts $value to integer, or throws an exception if not possible. Floats
+cannot be converted to integer.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toPositiveIntegerEx" id="_toPositiveIntegerEx">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toPositiveIntegerEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#101-114" title="Go to source code">toPositiveIntegerEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts $value to integer, or throws an exception if not possible. Floats
+cannot be converted to integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts $value to integer, or throws an exception if not possible. Floats
+cannot be converted to integer.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toLevelEx" id="_toLevelEx">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toLevelEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#116-126" title="Go to source code">toLevelEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts the value to a level. Throws an exception if not possible.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts the value to a level. Throws an exception if not possible.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toFileSizeEx" id="_toFileSizeEx">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toFileSizeEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#128-175" title="Go to source code">toFileSizeEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts a value to a valid file size (integer).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts a value to a valid file size (integer).</p>
+
+<p>Supports 'KB', 'MB' and 'GB' suffixes, where KB = 1024 B etc.</p>
+
+<p>The final value will be rounded to the nearest integer.</p>
+
+<p>Examples:</p>
+
+<ul>
+	<li>'100' =&gt; 100</li>
+
+	<li>'100.12' =&gt; 100</li>
+
+	<li>'100KB' =&gt; 102400</li>
+
+	<li>'1.5MB' =&gt; 1572864</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value File size (optionally with suffix).</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Parsed file size.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toStringEx" id="_toStringEx">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toStringEx">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#177-196" title="Go to source code">toStringEx</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts a value to string, or throws an exception if not possible.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts a value to string, or throws an exception if not possible.</p>
+
+<p>Objects can be converted to string if they implement the magic __toString()
+method.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="substConstants" id="_substConstants">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_substConstants">#</a>
+		<code><a href="source-class-LoggerOptionConverter.html#198-225" title="Go to source code">substConstants</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs value substitution for string options.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs value substitution for string options.</p>
+
+<p>An option can contain PHP constants delimited by '${' and '}'.</p>
+
+<p>E.g. for input string "some ${FOO} value", the method will attempt to
+substitute ${FOO} with the value of constant FOO if it exists.</p>
+
+<p>Therefore, if FOO is a constant, and it has value "bar", the resulting string
+will be "some bar value".</p>
+
+<p>If the constant is not defined, it will be replaced by an empty string, and
+the resulting string will be "some value".</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string String on which to perform substitution.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

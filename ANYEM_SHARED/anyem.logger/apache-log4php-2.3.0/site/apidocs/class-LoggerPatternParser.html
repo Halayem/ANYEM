@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerPatternParser | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li class="active"><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></li>
+				<li><a href="class-LoggerOptionConverter.html">LoggerOptionConverter</a></li>
+				<li><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></li>
+				<li class="active"><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></li>
+				<li><a href="class-LoggerUtils.html">LoggerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.helpers.html" title="Summary of log4php\helpers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerPatternParser</h1>
+
+
+	<div class="description">
+	
+<p>Most of the work of the LoggerPatternLayout class is delegated to the
+<code><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></code> class.</p>
+
+<p>It is this class that parses conversion patterns and creates a chained list
+of <code><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></code> converters.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.helpers.html">helpers</a><br />
+
+				<b>Version:</b>
+				$Revision: 1395467 $<br />
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerPatternParser.html#21-237" title="Go to source code">helpers/LoggerPatternParser.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerPatternParser.html#57-69" title="Go to source code">__construct</a>( <span>mixed <var>$pattern</var></span>, <span>mixed <var>$converterMap</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-LoggerPatternParser.html#71-125" title="Go to source code">parse</a>( )</code>
+
+		<div class="description short">
+			
+<p>Parses the conversion pattern string, converts it to a chain of pattern
+converters and returns the first converter in the chain.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parses the conversion pattern string, converts it to a chain of pattern
+converters and returns the first converter in the chain.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ESCAPE_CHAR" id="ESCAPE_CHAR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerPatternParser.html#36-37" title="Go to source code"><b>ESCAPE_CHAR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'%'</span></code></td>
+		<td class="description"><div>
+			<a href="#ESCAPE_CHAR" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Escape character for conversion words in the conversion pattern.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Escape character for conversion words in the conversion pattern.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

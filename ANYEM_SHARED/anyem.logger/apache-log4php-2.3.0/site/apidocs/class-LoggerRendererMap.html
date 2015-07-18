@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerRendererMap | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li class="active"><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerRendererDefault.html">LoggerRendererDefault</a></li>
+				<li><a href="class-LoggerRendererException.html">LoggerRendererException</a></li>
+				<li class="active"><a href="class-LoggerRendererMap.html">LoggerRendererMap</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerRenderer.html">LoggerRenderer</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.renderers.html" title="Summary of log4php\renderers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerRendererMap</h1>
+
+
+	<div class="description">
+	
+<p>Manages defined renderers and determines which renderer to use for a given
+input.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.renderers.html">renderers</a><br />
+
+				<b>Version:</b>
+				$Revision: 1394956 $<br />
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerRendererMap.html#21-186" title="Go to source code">renderers/LoggerRendererMap.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#44-48" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addRenderer" id="_addRenderer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addRenderer">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#50-81" title="Go to source code">addRenderer</a>( <span>string <var>$renderedClass</var></span>, <span>string <var>$renderingClass</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a renderer to the map.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a renderer to the map.</p>
+
+<p>If a renderer already exists for the given <var>$renderedClass</var> it will
+be overwritten without warning.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$renderedClass</var></dt>
+					<dd><code>string</code><br>$renderedClass The name of the class which will be rendered by the renderer.</dd>
+					<dt><var>$renderingClass</var></dt>
+					<dd><code>string</code><br>$renderingClass The name of the class which will perform the rendering.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefaultRenderer" id="_setDefaultRenderer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefaultRenderer">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#83-110" title="Go to source code">setDefaultRenderer</a>( <span>string <var>$renderingClass</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a custom default renderer class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a custom default renderer class.</p>
+
+<p>TODO: there's code duplication here. This method is almost identical to
+addRenderer(). However, it has custom error messages so let it sit for now.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$renderingClass</var></dt>
+					<dd><code>string</code><br>$renderingClass The name of the class which will perform the rendering.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultRenderer" id="_getDefaultRenderer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultRenderer">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#112-118" title="Go to source code">getDefaultRenderer</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the default renderer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the default renderer.</p>
+
+
+
+
+
+
+				<h4>Var</h4>
+				<div class="list">
+						LoggerRenderer<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAndRender" id="_findAndRender">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAndRender">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#120-142" title="Go to source code">findAndRender</a>( <span>mixed <var>$input</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds the appropriate renderer for the given <var>input</var>, and renders it
+(i.e. converts it to a string).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds the appropriate renderer for the given <var>input</var>, and renders it
+(i.e. converts it to a string).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>mixed</code><br>$input Input to render.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The rendered contents.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByObject" id="_getByObject">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerRenderer.html">LoggerRenderer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByObject">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#144-155" title="Go to source code">getByObject</a>( <span>mixed <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the appropriate renderer for a given object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the appropriate renderer for a given object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd><code>mixed</code><br>$object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerRenderer.html">LoggerRenderer</a></code></code><br>Or null if none found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByClassName" id="_getByClassName">
+
+		<td class="attributes"><code>
+			 public 
+			LoggerRendererObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByClassName">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#157-173" title="Go to source code">getByClassName</a>( <span>string <var>$class</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the appropriate renderer for a given class name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the appropriate renderer for a given class name.</p>
+
+<p>If no renderer could be found, returns NULL.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd><code>string</code><br>$class</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>LoggerRendererObject</code><br>Or null if not found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#175-178" title="Go to source code">clear</a>( )</code>
+
+		<div class="description short">
+			
+<p>Empties the renderer map.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Empties the renderer map.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reset" id="_reset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reset">#</a>
+		<code><a href="source-class-LoggerRendererMap.html#180-185" title="Go to source code">reset</a>( )</code>
+
+		<div class="description short">
+			
+<p>Resets the renderer map to it's default configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resets the renderer map to it's default configuration.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

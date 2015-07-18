@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerFilterLevelMatch | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li class="active"><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerFilterDenyAll.html">LoggerFilterDenyAll</a></li>
+				<li class="active"><a href="class-LoggerFilterLevelMatch.html">LoggerFilterLevelMatch</a></li>
+				<li><a href="class-LoggerFilterLevelRange.html">LoggerFilterLevelRange</a></li>
+				<li><a href="class-LoggerFilterStringMatch.html">LoggerFilterStringMatch</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.filters.html" title="Summary of log4php\filters"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerFilterLevelMatch</h1>
+
+
+	<div class="description">
+	
+<p>This is a very simple filter based on level matching.</p>
+
+<p>The filter admits two options <b><var>LevelToMatch</var></b> and
+<b><var>AcceptOnMatch</var></b>. If there is an exact match between the value of
+the <b><var>LevelToMatch</var></b> option and the level of the <code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code>, then the <code><a href="class-LoggerFilterLevelMatch.html#_decide">LoggerFilterLevelMatch::decide()</a></code> method returns <code><a href="class-LoggerFilter.html#ACCEPT">LoggerFilter::<b>ACCEPT</b></a></code> in case the <b><var>AcceptOnMatch</var></b> option value
+is set to <i>true</i>, if it is <i>false</i> then <code><a href="class-LoggerFilter.html#DENY">LoggerFilter::<b>DENY</b></a></code> is
+returned. If there is no match, <code><a href="class-LoggerFilter.html#NEUTRAL">LoggerFilter::<b>NEUTRAL</b></a></code> is returned.</p>
+
+<p>An example for this filter:</p>
+
+<p>{@example ../../examples/php/filter_levelmatch.php 19}</p>
+
+<p>The corresponding XML file:</p>
+
+<p>{@example ../../examples/resources/filter_levelmatch.xml 18}</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerConfigurable.html"><span>LoggerConfigurable</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-LoggerFilter.html"><span>LoggerFilter</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerFilterLevelMatch</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.filters.html">filters</a><br />
+
+				<b>Version:</b>
+				$Revision: 1213283 $<br />
+				<b>Since:</b>
+				0.6<br />
+		<b>Located at</b> <a href="source-class-LoggerFilterLevelMatch.html#21-100" title="Go to source code">filters/LoggerFilterLevelMatch.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="setAcceptOnMatch" id="_setAcceptOnMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAcceptOnMatch">#</a>
+		<code><a href="source-class-LoggerFilterLevelMatch.html#62-67" title="Go to source code">setAcceptOnMatch</a>( <span>boolean <var>$acceptOnMatch</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$acceptOnMatch</var></dt>
+					<dd><code>boolean</code><br>$acceptOnMatch</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLevelToMatch" id="_setLevelToMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLevelToMatch">#</a>
+		<code><a href="source-class-LoggerFilterLevelMatch.html#69-74" title="Go to source code">setLevelToMatch</a>( <span>string <var>$level</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$level</var></dt>
+					<dd><code>string</code><br>$l the level to match</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="decide" id="_decide">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decide">#</a>
+		<code><a href="source-class-LoggerFilterLevelMatch.html#76-99" title="Go to source code">decide</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the decision of this filter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the decision of this filter.</p>
+
+<p>Returns <code><a href="class-LoggerFilter.html#NEUTRAL">LoggerFilter::<b>NEUTRAL</b></a></code> if the <b><var>LevelToMatch</var></b>
+option is not set or if there is not match. Otherwise, if there is a match, then
+the returned decision is <code><a href="class-LoggerFilter.html#ACCEPT">LoggerFilter::<b>ACCEPT</b></a></code> if the
+<b><var>AcceptOnMatch</var></b> property is set to <i>true</i>. The returned
+decision is <code><a href="class-LoggerFilter.html#DENY">LoggerFilter::<b>DENY</b></a></code> if the <b><var>AcceptOnMatch</var></b>
+property is set to <i>false</i>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerFilter.html#_decide">LoggerFilter::decide()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerFilter.html#methods">LoggerFilter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerFilter.html#_activateOptions">activateOptions()</a>, 
+			<a href="class-LoggerFilter.html#_addNext">addNext()</a>, 
+			<a href="class-LoggerFilter.html#_getNext">getNext()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerConfigurable.html#methods">LoggerConfigurable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerConfigurable.html#_setBoolean">setBoolean()</a>, 
+			<a href="class-LoggerConfigurable.html#_setFileSize">setFileSize()</a>, 
+			<a href="class-LoggerConfigurable.html#_setInteger">setInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setLevel">setLevel()</a>, 
+			<a href="class-LoggerConfigurable.html#_setNumeric">setNumeric()</a>, 
+			<a href="class-LoggerConfigurable.html#_setPositiveInteger">setPositiveInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setString">setString()</a>, 
+			<a href="class-LoggerConfigurable.html#_warn">warn()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-LoggerFilter.html#constants">LoggerFilter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerFilter.html#ACCEPT"><b>ACCEPT</b></a>, 
+			<a href="class-LoggerFilter.html#DENY"><b>DENY</b></a>, 
+			<a href="class-LoggerFilter.html#NEUTRAL"><b>NEUTRAL</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="acceptOnMatch" id="$acceptOnMatch">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFilterLevelMatch.html#50-54" title="Go to source code"><var>$acceptOnMatch</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$acceptOnMatch" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Indicates if this event should be accepted or denied on match</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates if this event should be accepted or denied on match</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="levelToMatch" id="$levelToMatch">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFilterLevelMatch.html#56-60" title="Go to source code"><var>$levelToMatch</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$levelToMatch" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The level, when to match</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The level, when to match</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-LoggerFilter.html#properties">LoggerFilter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerFilter.html#$next"><var>$next</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

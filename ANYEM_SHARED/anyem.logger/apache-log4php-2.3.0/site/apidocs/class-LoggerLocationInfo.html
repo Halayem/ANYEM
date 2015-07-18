@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerLocationInfo | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li class="active"><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerLocationInfo</h1>
+
+
+	<div class="description">
+	
+<p>The internal representation of caller location information.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1379738 $<br />
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerLocationInfo.html#21-103" title="Go to source code">LoggerLocationInfo.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#63-76" title="Go to source code">__construct</a>( <span>array <var>$trace</var></span>, <span>mixed <var>$fqcn</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Instantiate location information based on a PHP_MANUAL#debug_backtrace.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instantiate location information based on a PHP_MANUAL#debug_backtrace.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$trace</var></dt>
+					<dd><code>array</code><br>$trace</dd>
+					<dt><var>$fqcn</var></dt>
+					<dd><code>mixed</code><br>$caller</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClassName" id="_getClassName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClassName">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#78-81" title="Go to source code">getClassName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the caller class name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the caller class name.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFileName" id="_getFileName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFileName">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#83-86" title="Go to source code">getFileName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the caller file name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the caller file name.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLineNumber" id="_getLineNumber">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLineNumber">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#88-91" title="Go to source code">getLineNumber</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the caller line number.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the caller line number.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMethodName" id="_getMethodName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMethodName">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#93-96" title="Go to source code">getMethodName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the caller method name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the caller method name.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFullInfo" id="_getFullInfo">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFullInfo">#</a>
+		<code><a href="source-class-LoggerLocationInfo.html#98-101" title="Go to source code">getFullInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the full information of the caller.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the full information of the caller.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="LOCATION_INFO_NA" id="LOCATION_INFO_NA">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLocationInfo.html#30-31" title="Go to source code"><b>LOCATION_INFO_NA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'NA'</span></code></td>
+		<td class="description"><div>
+			<a href="#LOCATION_INFO_NA" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The value to return when the location information is not available.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The value to return when the location information is not available.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="lineNumber" id="$lineNumber">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLocationInfo.html#33-37" title="Go to source code"><var>$lineNumber</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$lineNumber" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Caller line number.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Caller line number.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fileName" id="$fileName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLocationInfo.html#39-43" title="Go to source code"><var>$fileName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$fileName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Caller file name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Caller file name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="className" id="$className">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLocationInfo.html#45-49" title="Go to source code"><var>$className</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$className" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Caller class name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Caller class name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="methodName" id="$methodName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLocationInfo.html#51-55" title="Go to source code"><var>$methodName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$methodName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Caller method name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Caller method name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fullInfo" id="$fullInfo">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLocationInfo.html#57-61" title="Go to source code"><var>$fullInfo</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$fullInfo" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>All the information combined.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>All the information combined.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerFormattingInfo | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li class="active"><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></li>
+				<li><a href="class-LoggerOptionConverter.html">LoggerOptionConverter</a></li>
+				<li><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></li>
+				<li><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></li>
+				<li><a href="class-LoggerUtils.html">LoggerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.helpers.html" title="Summary of log4php\helpers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerFormattingInfo</h1>
+
+
+	<div class="description">
+	
+<p>This class encapsulates the information obtained when parsing formatting
+modifiers in conversion modifiers.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.helpers.html">helpers</a><br />
+
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerFormattingInfo.html#21-54" title="Go to source code">helpers/LoggerFormattingInfo.php</a><br />
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="min" id="$min">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFormattingInfo.html#31-35" title="Go to source code"><var>$min</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$min" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Minimal output length. If output is shorter than this value, it will be
+padded with spaces.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Minimal output length. If output is shorter than this value, it will be
+padded with spaces.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="max" id="$max">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFormattingInfo.html#37-41" title="Go to source code"><var>$max</var></a>
+		</td>
+		<td class="value"><code>PHP_INT_MAX</code></td>
+		<td class="description"><div>
+			<a href="#$max" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum output length. If output is longer than this value, it will be
+trimmed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum output length. If output is longer than this value, it will be
+trimmed.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="padLeft" id="$padLeft">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFormattingInfo.html#43-47" title="Go to source code"><var>$padLeft</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$padLeft" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to pad the string from the left. If set to false, the string will be
+padded from the right.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to pad the string from the left. If set to false, the string will be
+padded from the right.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="trimLeft" id="$trimLeft">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerFormattingInfo.html#49-53" title="Go to source code"><var>$trimLeft</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$trimLeft" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to trim the string from the left. If set to false, the string will be
+trimmed from the right.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to trim the string from the left. If set to false, the string will be
+trimmed from the right.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

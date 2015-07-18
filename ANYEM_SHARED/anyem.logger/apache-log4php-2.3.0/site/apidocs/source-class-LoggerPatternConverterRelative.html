@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File pattern/LoggerPatternConverterRelative.php | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li class="active"><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerPatternConverterClass.html">LoggerPatternConverterClass</a></li>
+				<li><a href="class-LoggerPatternConverterCookie.html">LoggerPatternConverterCookie</a></li>
+				<li><a href="class-LoggerPatternConverterDate.html">LoggerPatternConverterDate</a></li>
+				<li><a href="class-LoggerPatternConverterEnvironment.html">LoggerPatternConverterEnvironment</a></li>
+				<li><a href="class-LoggerPatternConverterFile.html">LoggerPatternConverterFile</a></li>
+				<li><a href="class-LoggerPatternConverterLevel.html">LoggerPatternConverterLevel</a></li>
+				<li><a href="class-LoggerPatternConverterLine.html">LoggerPatternConverterLine</a></li>
+				<li><a href="class-LoggerPatternConverterLiteral.html">LoggerPatternConverterLiteral</a></li>
+				<li><a href="class-LoggerPatternConverterLocation.html">LoggerPatternConverterLocation</a></li>
+				<li><a href="class-LoggerPatternConverterLogger.html">LoggerPatternConverterLogger</a></li>
+				<li><a href="class-LoggerPatternConverterMDC.html">LoggerPatternConverterMDC</a></li>
+				<li><a href="class-LoggerPatternConverterMessage.html">LoggerPatternConverterMessage</a></li>
+				<li><a href="class-LoggerPatternConverterMethod.html">LoggerPatternConverterMethod</a></li>
+				<li><a href="class-LoggerPatternConverterNDC.html">LoggerPatternConverterNDC</a></li>
+				<li><a href="class-LoggerPatternConverterNewLine.html">LoggerPatternConverterNewLine</a></li>
+				<li><a href="class-LoggerPatternConverterProcess.html">LoggerPatternConverterProcess</a></li>
+				<li class="active"><a href="class-LoggerPatternConverterRelative.html">LoggerPatternConverterRelative</a></li>
+				<li><a href="class-LoggerPatternConverterRequest.html">LoggerPatternConverterRequest</a></li>
+				<li><a href="class-LoggerPatternConverterServer.html">LoggerPatternConverterServer</a></li>
+				<li><a href="class-LoggerPatternConverterSession.html">LoggerPatternConverterSession</a></li>
+				<li><a href="class-LoggerPatternConverterSessionID.html">LoggerPatternConverterSessionID</a></li>
+				<li><a href="class-LoggerPatternConverterSuperglobal.html">LoggerPatternConverterSuperglobal</a></li>
+				<li><a href="class-LoggerPatternConverterThrowable.html">LoggerPatternConverterThrowable</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.pattern.html" title="Summary of log4php\pattern"><span>Package</span></a>
+			</li>
+			<li>
+				<a href="class-LoggerPatternConverterRelative.html" title="Summary of LoggerPatternConverterRelative"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * Licensed to the Apache Software Foundation (ASF) under one or more
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * contributor license agreements. See the NOTICE file distributed with
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * this work for additional information regarding copyright ownership.
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * The ASF licenses this file to You under the Apache License, Version 2.0
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> * (the &quot;License&quot;); you may not use this file except in compliance with
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> * the License. You may obtain a copy of the License at
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> *
+</span></span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment"> *     http://www.apache.org/licenses/LICENSE-2.0
+</span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> *
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> * Unless required by applicable law or agreed to in writing, software
+</span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+</span></span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+</span></span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-comment"> * See the License for the specific language governing permissions and
+</span></span><span id="16" class="l"><a class="l" href="#16">16: </a><span class="php-comment"> * limitations under the License.
+</span></span><span id="17" class="l"><a class="l" href="#17">17: </a><span class="php-comment"> *
+</span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment"> * @package log4php
+</span></span><span id="19" class="l"><a class="l" href="#19">19: </a><span class="php-comment"> */</span>
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>
+</span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-comment">/**
+</span></span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="php-comment"> * Returns the number of milliseconds elapsed since the start of the 
+</span></span><span id="23" class="l"><a class="l" href="#23">23: </a><span class="php-comment"> * application until the creation of the logging event.
+</span></span><span id="24" class="l"><a class="l" href="#24">24: </a><span class="php-comment"> * 
+</span></span><span id="25" class="l"><a class="l" href="#25">25: </a><span class="php-comment"> * @package log4php
+</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment"> * @subpackage pattern
+</span></span><span id="27" class="l"><a class="l" href="#27">27: </a><span class="php-comment"> * @version $Revision: 1379731 $
+</span></span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-comment"> * @since 2.3
+</span></span><span id="29" class="l"><a class="l" href="#29">29: </a><span class="php-comment"> */</span>
+</span><span id="30" class="l"><a class="l" href="#30">30: </a><span class="php-keyword1">class</span> <a id="LoggerPatternConverterRelative" href="#LoggerPatternConverterRelative">LoggerPatternConverterRelative</a> <span class="php-keyword1">extends</span> LoggerPatternConverter {
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_convert" href="#_convert">convert</a>(LoggerLoggingEvent <span class="php-var">$event</span>) {
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>        <span class="php-var">$ts</span> = <span class="php-var">$event</span>-&gt;getRelativeTime();
+</span><span id="34" class="l"><a class="l" href="#34">34: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">number_format</span>(<span class="php-var">$ts</span>, <span class="php-num">4</span>);
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>    }
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>}
+</span><span id="37" class="l"><a class="l" href="#37">37: </a></span></code></pre>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

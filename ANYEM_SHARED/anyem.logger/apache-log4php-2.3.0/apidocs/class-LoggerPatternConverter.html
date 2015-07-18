@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerPatternConverter | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li class="active"><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></li>
+				<li><a href="class-LoggerOptionConverter.html">LoggerOptionConverter</a></li>
+				<li class="active"><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></li>
+				<li><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></li>
+				<li><a href="class-LoggerUtils.html">LoggerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.helpers.html" title="Summary of log4php\helpers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerPatternConverter</h1>
+
+
+	<div class="description">
+	
+<p>LoggerPatternConverter is an abstract class that provides the formatting
+functionality that derived classes need.</p>
+
+<p>Conversion specifiers in a conversion patterns are parsed to individual
+PatternConverters. Each of which is responsible for converting a logging event
+in a converter specific manner.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-LoggerPatternConverterClass.html">LoggerPatternConverterClass</a>, 
+			<a href="class-LoggerPatternConverterDate.html">LoggerPatternConverterDate</a>, 
+			<a href="class-LoggerPatternConverterMethod.html">LoggerPatternConverterMethod</a>, 
+			<a href="class-LoggerPatternConverterNDC.html">LoggerPatternConverterNDC</a>, 
+			<a href="class-LoggerPatternConverterNewLine.html">LoggerPatternConverterNewLine</a>, 
+			<a href="class-LoggerPatternConverterProcess.html">LoggerPatternConverterProcess</a>, 
+			<a href="class-LoggerPatternConverterRelative.html">LoggerPatternConverterRelative</a>, 
+			<a href="class-LoggerPatternConverterSessionID.html">LoggerPatternConverterSessionID</a>, 
+			<a href="class-LoggerPatternConverterSuperglobal.html">LoggerPatternConverterSuperglobal</a>, 
+			<a href="class-LoggerPatternConverterThrowable.html">LoggerPatternConverterThrowable</a>, 
+			<a href="class-LoggerPatternConverterFile.html">LoggerPatternConverterFile</a>, 
+			<a href="class-LoggerPatternConverterLevel.html">LoggerPatternConverterLevel</a>, 
+			<a href="class-LoggerPatternConverterLine.html">LoggerPatternConverterLine</a>, 
+			<a href="class-LoggerPatternConverterLiteral.html">LoggerPatternConverterLiteral</a>, 
+			<a href="class-LoggerPatternConverterLocation.html">LoggerPatternConverterLocation</a>, 
+			<a href="class-LoggerPatternConverterLogger.html">LoggerPatternConverterLogger</a>, 
+			<a href="class-LoggerPatternConverterMDC.html">LoggerPatternConverterMDC</a>, 
+			<a href="class-LoggerPatternConverterMessage.html">LoggerPatternConverterMessage</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-LoggerPatternConverterCookie.html">LoggerPatternConverterCookie</a>, 
+			<a href="class-LoggerPatternConverterEnvironment.html">LoggerPatternConverterEnvironment</a>, 
+			<a href="class-LoggerPatternConverterRequest.html">LoggerPatternConverterRequest</a>, 
+			<a href="class-LoggerPatternConverterServer.html">LoggerPatternConverterServer</a>, 
+			<a href="class-LoggerPatternConverterSession.html">LoggerPatternConverterSession</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.helpers.html">helpers</a><br />
+
+				<b>Version:</b>
+				$Revision: 1326626 $<br />
+				<b>Since:</b>
+				0.3<br />
+		<b>Located at</b> <a href="source-class-LoggerPatternConverter.html#21-131" title="Go to source code">pattern/LoggerPatternConverter.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerPatternConverter.html#54-63" title="Go to source code">__construct</a>( <span><code><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></code> <var>$formattingInfo</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$option</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$formattingInfo</var></dt>
+					<dd><code><code><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></code></code><br>$formattingInfo</dd>
+					<dt><var>$option</var></dt>
+					<dd><code>array</code><br>$option</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="activateOptions" id="_activateOptions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateOptions">#</a>
+		<code><a href="source-class-LoggerPatternConverter.html#65-69" title="Go to source code">activateOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Called in constructor. Converters which need to process the options can
+override this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Called in constructor. Converters which need to process the options can
+override this method.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convert" id="_convert">
+
+		<td class="attributes"><code>
+			abstract public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convert">#</a>
+		<code><a href="source-class-LoggerPatternConverter.html#71-77" title="Go to source code">convert</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts the logging event to the desired format. Derived pattern converters
+must implement this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts the logging event to the desired format. Derived pattern converters
+must implement this method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="_format">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format">#</a>
+		<code><a href="source-class-LoggerPatternConverter.html#79-130" title="Go to source code">format</a>( <span>string <var>&amp; $sbuf</var></span>, <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts the event and formats it according to setting in the Formatting
+information object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts the event and formats it according to setting in the Formatting
+information object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sbuf</var></dt>
+					<dd><code>string</code><br>&amp;$sbuf string buffer to write to</dd>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event Event to be formatted.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="next" id="$next">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerPatternConverter.html#36-40" title="Go to source code"><var>$next</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$next" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Next converter in the converter chain.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Next converter in the converter chain.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="formattingInfo" id="$formattingInfo">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerPatternConverter.html#42-46" title="Go to source code"><var>$formattingInfo</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$formattingInfo" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Formatting information, parsed from pattern modifiers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Formatting information, parsed from pattern modifiers.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="option" id="$option">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerPatternConverter.html#48-52" title="Go to source code"><var>$option</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$option" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Converter-specific formatting options.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Converter-specific formatting options.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

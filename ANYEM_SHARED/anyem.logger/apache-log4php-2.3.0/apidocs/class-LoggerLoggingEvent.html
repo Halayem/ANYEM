@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerLoggingEvent | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li class="active"><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerLoggingEvent</h1>
+
+
+	<div class="description">
+	
+<p>The internal representation of logging event.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1382273 $<br />
+		<b>Located at</b> <a href="source-class-LoggerLoggingEvent.html#21-366" title="Go to source code">LoggerLoggingEvent.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#107-139" title="Go to source code">__construct</a>( <span>string <var>$fqcn</var></span>, <span>mixed <var>$logger</var></span>, <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$level</var></span>, <span>mixed <var>$message</var></span>, <span>integer <var>$timeStamp</var> = <span class="php-keyword1">null</span></span>, <span>Exception <var>$throwable</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Instantiate a LoggingEvent from the supplied parameters.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instantiate a LoggingEvent from the supplied parameters.</p>
+
+<p>Except <code><a href="class-LoggerLoggingEvent.html#$timeStamp">LoggerLoggingEvent::<var>$timeStamp</var></a></code> all the other fields of LoggerLoggingEvent are
+filled when actually needed.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fqcn</var></dt>
+					<dd><code>string</code><br>$fqcn name of the caller class.</dd>
+					<dt><var>$logger</var></dt>
+					<dd><code>mixed</code><br>$logger The <code><a href="class-Logger.html">Logger</a></code> category of this event or the logger name.</dd>
+					<dt><var>$level</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br>$level The level of this event.</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>mixed</code><br>$message The message of this event.</dd>
+					<dt><var>$timeStamp</var></dt>
+					<dd><code>integer</code><br>$timeStamp the timestamp of this logging event.</dd>
+					<dt><var>$throwable</var></dt>
+					<dd><code>Exception</code><br>$throwable The throwable associated with logging event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFullQualifiedClassname" id="_getFullQualifiedClassname">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFullQualifiedClassname">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#141-147" title="Go to source code">getFullQualifiedClassname</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the full qualified classname. TODO: PHP does contain namespaces in
+5.3. Those should be returned too,</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the full qualified classname. TODO: PHP does contain namespaces in
+5.3. Those should be returned too,</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLocationInformation" id="_getLocationInformation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLocationInformation">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#149-195" title="Go to source code">getLocationInformation</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set the location information for this logging event. The collected
+information is cached for future use.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the location information for this logging event. The collected
+information is cached for future use.</p>
+
+<p>This method uses PHP_MANUAL#debug_backtrace debug_backtrace()
+function (if exists) to collect informations about caller.</p>
+
+<p>It only recognize informations generated by <code><a href="class-Logger.html">Logger</a></code> and its
+subclasses.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLevel" id="_getLevel">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLevel">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#197-204" title="Go to source code">getLevel</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the level of this event. Use this form instead of directly accessing
+the <code><a href="class-LoggerLoggingEvent.html#$level">LoggerLoggingEvent::<var>$level</var></a></code> field.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the level of this event. Use this form instead of directly accessing
+the <code><a href="class-LoggerLoggingEvent.html#$level">LoggerLoggingEvent::<var>$level</var></a></code> field.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLogger" id="_getLogger">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Logger.html">Logger</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLogger">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#206-212" title="Go to source code">getLogger</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the logger which created the event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the logger which created the event.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Logger.html">Logger</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLoggerName" id="_getLoggerName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLoggerName">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#214-221" title="Go to source code">getLoggerName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the name of the logger. Use this form instead of directly accessing
+the $categoryName field.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the name of the logger. Use this form instead of directly accessing
+the $categoryName field.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMessage" id="_getMessage">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMessage">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#223-229" title="Go to source code">getMessage</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the message for this logging event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the message for this logging event.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNDC" id="_getNDC">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNDC">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#231-244" title="Go to source code">getNDC</a>( )</code>
+
+		<div class="description short">
+			
+<p>This method returns the NDC for this event. It will return the correct
+content even if the event was generated in a different thread or even on a
+different machine. The <code><a href="class-LoggerNDC.html#_get">LoggerNDC::get()</a></code> method should <b>never</b> be
+called directly.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This method returns the NDC for this event. It will return the correct
+content even if the event was generated in a different thread or even on a
+different machine. The <code><a href="class-LoggerNDC.html#_get">LoggerNDC::get()</a></code> method should <b>never</b> be
+called directly.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMDC" id="_getMDC">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMDC">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#246-253" title="Go to source code">getMDC</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the the context corresponding to the <code>&lt;span
+class="php-keyword2"&gt;key&lt;/span&gt;</code> parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the the context corresponding to the <code>&lt;span
+class="php-keyword2"&gt;key&lt;/span&gt;</code> parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMDCMap" id="_getMDCMap">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMDCMap">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#255-261" title="Go to source code">getMDCMap</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the entire MDC context.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the entire MDC context.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRenderedMessage" id="_getRenderedMessage">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRenderedMessage">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#263-277" title="Go to source code">getRenderedMessage</a>( )</code>
+
+		<div class="description short">
+			
+<p>Render message.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Render message.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStartTime" id="_getStartTime">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStartTime">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#279-289" title="Go to source code">getStartTime</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the time when the application started, as a UNIX timestamp with
+microseconds.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the time when the application started, as a UNIX timestamp with
+microseconds.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimeStamp" id="_getTimeStamp">
+
+		<td class="attributes"><code>
+			 public 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimeStamp">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#291-296" title="Go to source code">getTimeStamp</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelativeTime" id="_getRelativeTime">
+
+		<td class="attributes"><code>
+			 public 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelativeTime">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#298-306" title="Go to source code">getRelativeTime</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the time in seconds passed from the beginning of execution to the
+time the event was constructed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the time in seconds passed from the beginning of execution to the
+time the event was constructed.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>Seconds with microseconds in decimals.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThreadName" id="_getThreadName">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThreadName">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#323-331" title="Go to source code">getThreadName</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThrowableInformation" id="_getThrowableInformation">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThrowableInformation">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#333-338" title="Go to source code">getThrowableInformation</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>LoggerThrowableInformation<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toString" id="_toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toString">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#340-346" title="Go to source code">toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Serialize this object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Serialize this object</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code><a href="source-class-LoggerLoggingEvent.html#348-364" title="Go to source code">__sleep</a>( )</code>
+
+		<div class="description short">
+			
+<p>Avoid serialization of the $logger object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Avoid serialization of the $logger object</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="level" id="$level">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLoggingEvent.html#50-54" title="Go to source code"><var>$level</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$level" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Level of the logging event.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Level of the logging event.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timeStamp" id="$timeStamp">
+		<td class="attributes"><code>
+			public  
+			float
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLoggingEvent.html#90-95" title="Go to source code"><var>$timeStamp</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$timeStamp" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The number of seconds elapsed from 1/1/1970 until logging event was created
+plus microseconds if available.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The number of seconds elapsed from 1/1/1970 until logging event was created
+plus microseconds if available.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerHierarchy | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li class="active"><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerHierarchy</h1>
+
+
+	<div class="description">
+	
+<p>This class is specialized in retrieving loggers by name and also maintaining
+the logger hierarchy. The logger hierarchy is dealing with the several
+Log-Levels Logger can have. From log4j website:</p>
+
+<p>"A logger is said to be an ancestor of another logger if its name followed by
+a dot is a prefix of the descendant logger name. A logger is said to be a parent
+of a child logger if there are no ancestors between itself and the descendant
+logger."</p>
+
+<p>Child Loggers do inherit their Log-Levels from their Ancestors. They can
+increase their Log-Level compared to their Ancestors, but they cannot decrease
+it.</p>
+
+<p>The casual user does not have to deal with this class directly.</p>
+
+<p>The structure of the logger hierarchy is maintained by the getLogger method.
+The hierarchy is such that children link to their parent but parents do not have
+any pointers to their children. Moreover, loggers can be instantiated in any
+order, in particular descendant before ancestor.</p>
+
+<p>In case a descendant is created before a particular ancestor, then it creates
+a provision node for the ancestor and adds itself to the provision node. Other
+descendants of the same ancestor add themselves to the previously created
+provision node.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1394956 $<br />
+		<b>Located at</b> <a href="source-class-LoggerHierarchy.html#21-257" title="Go to source code">LoggerHierarchy.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#74-82" title="Go to source code">__construct</a>( <span><code><a href="class-LoggerRoot.html">LoggerRoot</a></code> <var>$root</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new logger hierarchy.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new logger hierarchy.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$root</var></dt>
+					<dd><code><code><a href="class-LoggerRoot.html">LoggerRoot</a></code></code><br>$root The root logger.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#84-89" title="Go to source code">clear</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clears all loggers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clears all loggers.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exists" id="_exists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exists">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#91-98" title="Go to source code">exists</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if the named logger exists in the hierarchy.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if the named logger exists in the hierarchy.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrentLoggers" id="_getCurrentLoggers">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentLoggers">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#100-106" title="Go to source code">getCurrentLoggers</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all the currently defined loggers in this hierarchy as an array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all the currently defined loggers in this hierarchy as an array.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLogger" id="_getLogger">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Logger.html">Logger</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLogger">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#108-145" title="Go to source code">getLogger</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a named logger instance logger. If it doesn't exist, one is
+created.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a named logger instance logger. If it doesn't exist, one is
+created.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Logger name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Logger.html">Logger</a></code></code><br>Logger instance.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRendererMap" id="_getRendererMap">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerRendererMap.html">LoggerRendererMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRendererMap">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#147-153" title="Go to source code">getRendererMap</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the logger renderer map.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the logger renderer map.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerRendererMap.html">LoggerRendererMap</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRootLogger" id="_getRootLogger">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerRoot.html">LoggerRoot</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRootLogger">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#155-161" title="Go to source code">getRootLogger</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the root logger.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the root logger.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerRoot.html">LoggerRoot</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThreshold" id="_getThreshold">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThreshold">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#163-169" title="Go to source code">getThreshold</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the main threshold level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the main threshold level.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDisabled" id="_isDisabled">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDisabled">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#171-178" title="Go to source code">isDisabled</a>( <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$level</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns true if the hierarchy is disabled for given log level and false
+otherwise.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if the hierarchy is disabled for given log level and false
+otherwise.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resetConfiguration" id="_resetConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resetConfiguration">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#180-209" title="Go to source code">resetConfiguration</a>( )</code>
+
+		<div class="description short">
+			
+<p>Reset all values contained in this hierarchy instance to their default.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reset all values contained in this hierarchy instance to their default.</p>
+
+<p>This removes all appenders from all loggers, sets the level of all non-root
+loggers to <i>null</i>, sets their additivity flag to <i>true</i> and sets the
+level of the root logger to LOGGER_LEVEL_DEBUG.</p>
+
+<p>Existing loggers are not removed. They are just reset.</p>
+
+<p>This method should be used sparingly and with care as it will block all
+logging until it is completed.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setThreshold" id="_setThreshold">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setThreshold">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#211-217" title="Go to source code">setThreshold</a>( <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$threshold</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the main threshold level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the main threshold level.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$threshold</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br>$l</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shutdown" id="_shutdown">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shutdown">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#219-236" title="Go to source code">shutdown</a>( )</code>
+
+		<div class="description short">
+			
+<p>Shutting down a hierarchy will <i>safely</i> close and remove all appenders
+in all loggers including the root logger.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Shutting down a hierarchy will <i>safely</i> close and remove all appenders
+in all loggers including the root logger.</p>
+
+<p>The shutdown method is careful to close nested appenders before closing
+regular appenders. This is allows configurations where a regular appender is
+attached to a logger and again to a nested appender.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="printHierarchy" id="_printHierarchy">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_printHierarchy">#</a>
+		<code><a href="source-class-LoggerHierarchy.html#238-243" title="Go to source code">printHierarchy</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prints the current Logger hierarchy tree. Useful for debugging.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prints the current Logger hierarchy tree. Useful for debugging.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="loggers" id="$loggers">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerHierarchy.html#52-53" title="Go to source code"><var>$loggers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$loggers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Array holding all Logger instances.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Array holding all Logger instances.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="root" id="$root">
+		<td class="attributes"><code>
+			protected  
+			RootLogger
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerHierarchy.html#55-59" title="Go to source code"><var>$root</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$root" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The root logger.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The root logger.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="rendererMap" id="$rendererMap">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerRendererMap.html">LoggerRendererMap</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerHierarchy.html#61-65" title="Go to source code"><var>$rendererMap</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$rendererMap" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The logger renderer map.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The logger renderer map.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="threshold" id="$threshold">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerHierarchy.html#67-72" title="Go to source code"><var>$threshold</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$threshold" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Main level threshold. Events with lower level will not be logged by any
+logger, regardless of it's configuration.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Main level threshold. Events with lower level will not be logged by any
+logger, regardless of it's configuration.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

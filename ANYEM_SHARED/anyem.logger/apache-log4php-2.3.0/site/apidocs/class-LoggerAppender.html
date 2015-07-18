@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerAppender | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li class="active"><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerAppender</h1>
+
+
+	<div class="description">
+	
+<p>Abstract class that defines output logs strategies.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerConfigurable.html"><span>LoggerConfigurable</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerAppender</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-LoggerAppenderConsole.html">LoggerAppenderConsole</a>, 
+			<a href="class-LoggerAppenderEcho.html">LoggerAppenderEcho</a>, 
+			<a href="class-LoggerAppenderSocket.html">LoggerAppenderSocket</a>, 
+			<a href="class-LoggerAppenderSyslog.html">LoggerAppenderSyslog</a>, 
+			<a href="class-LoggerAppenderFile.html">LoggerAppenderFile</a>, 
+			<a href="class-LoggerAppenderFirePHP.html">LoggerAppenderFirePHP</a>, 
+			<a href="class-LoggerAppenderMail.html">LoggerAppenderMail</a>, 
+			<a href="class-LoggerAppenderMailEvent.html">LoggerAppenderMailEvent</a>, 
+			<a href="class-LoggerAppenderMongoDB.html">LoggerAppenderMongoDB</a>, 
+			<a href="class-LoggerAppenderNull.html">LoggerAppenderNull</a>, 
+			<a href="class-LoggerAppenderPDO.html">LoggerAppenderPDO</a>, 
+			<a href="class-LoggerAppenderPhp.html">LoggerAppenderPhp</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-LoggerAppenderDailyFile.html">LoggerAppenderDailyFile</a>, 
+			<a href="class-LoggerAppenderRollingFile.html">LoggerAppenderRollingFile</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>Version:</b>
+				$Revision: 1374777 $<br />
+		<b>Located at</b> <a href="source-class-LoggerAppender.html#21-286" title="Go to source code">LoggerAppender.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LoggerAppender.html#72-82" title="Go to source code">__construct</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Default constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Default constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Appender name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-LoggerAppender.html#84-86" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultLayout" id="_getDefaultLayout">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLayout.html">LoggerLayout</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultLayout">#</a>
+		<code><a href="source-class-LoggerAppender.html#88-96" title="Go to source code">getDefaultLayout</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the default layout for this appender. Can be overriden by derived
+appenders.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the default layout for this appender. Can be overriden by derived
+appenders.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLayout.html">LoggerLayout</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addFilter" id="_addFilter">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addFilter">#</a>
+		<code><a href="source-class-LoggerAppender.html#98-108" title="Go to source code">addFilter</a>( <span><code><a href="class-LoggerFilter.html">LoggerFilter</a></code> <var>$filter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a filter to the end of the filter chain.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a filter to the end of the filter chain.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd><code><code><a href="class-LoggerFilter.html">LoggerFilter</a></code></code><br>$filter add a new LoggerFilter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearFilters" id="_clearFilters">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearFilters">#</a>
+		<code><a href="source-class-LoggerAppender.html#110-115" title="Go to source code">clearFilters</a>( )</code>
+
+		<div class="description short">
+			
+<p>Clears the filter chain by removing all the filters in it.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clears the filter chain by removing all the filters in it.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFilter" id="_getFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerFilter.html">LoggerFilter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFilter">#</a>
+		<code><a href="source-class-LoggerAppender.html#117-124" title="Go to source code">getFilter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the first filter in the filter chain. The return value may be
+<i>null</i> if no is filter is set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the first filter in the filter chain. The return value may be
+<i>null</i> if no is filter is set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerFilter.html">LoggerFilter</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFirstFilter" id="_getFirstFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerFilter.html">LoggerFilter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFirstFilter">#</a>
+		<code><a href="source-class-LoggerAppender.html#126-133" title="Go to source code">getFirstFilter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the first filter in the filter chain. The return value may be
+<i>null</i> if no is filter is set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the first filter in the filter chain. The return value may be
+<i>null</i> if no is filter is set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerFilter.html">LoggerFilter</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doAppend" id="_doAppend">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doAppend">#</a>
+		<code><a href="source-class-LoggerAppender.html#135-159" title="Go to source code">doAppend</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs threshold checks and invokes filters before delegating logging to
+the subclass' specific <i>append()</i> method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs threshold checks and invokes filters before delegating logging to
+the subclass' specific <i>append()</i> method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-LoggerAppender.html#_append">LoggerAppender::append()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLayout" id="_setLayout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLayout">#</a>
+		<code><a href="source-class-LoggerAppender.html#161-169" title="Go to source code">setLayout</a>( <span><code><a href="class-LoggerLayout.html">LoggerLayout</a></code> <var>$layout</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the appender layout.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the appender layout.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$layout</var></dt>
+					<dd><code><code><a href="class-LoggerLayout.html">LoggerLayout</a></code></code><br>$layout</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLayout" id="_getLayout">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLayout.html">LoggerLayout</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLayout">#</a>
+		<code><a href="source-class-LoggerAppender.html#171-177" title="Go to source code">getLayout</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the appender layout.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the appender layout.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLayout.html">LoggerLayout</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="requiresLayout" id="_requiresLayout">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_requiresLayout">#</a>
+		<code><a href="source-class-LoggerAppender.html#179-198" title="Go to source code">requiresLayout</a>( )</code>
+
+		<div class="description short">
+			
+<p>Configurators call this method to determine if the appender requires a
+layout.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configurators call this method to determine if the appender requires a
+layout.</p>
+
+<p>If this method returns <i>true</i>, meaning that layout is required, then the
+configurator will configure a layout using the configuration information at its
+disposal. If this method returns <i>false</i>, meaning that a layout is not
+required, then layout configuration will be skipped even if there is available
+layout configuration information at the disposal of the configurator.</p>
+
+<p>In the rather exceptional case, where the appender implementation admits a
+layout but can also work without it, then the appender should return
+<i>true</i>.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getName">#</a>
+		<code><a href="source-class-LoggerAppender.html#200-206" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retruns the appender name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retruns the appender name.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setName" id="_setName">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setName">#</a>
+		<code><a href="source-class-LoggerAppender.html#208-214" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the appender name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the appender name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThreshold" id="_getThreshold">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThreshold">#</a>
+		<code><a href="source-class-LoggerAppender.html#216-222" title="Go to source code">getThreshold</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the appender's threshold level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the appender's threshold level.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setThreshold" id="_setThreshold">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setThreshold">#</a>
+		<code><a href="source-class-LoggerAppender.html#224-233" title="Go to source code">setThreshold</a>( <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code>|string <var>$threshold</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the appender threshold.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the appender threshold.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$threshold</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code>|string</code><br>$threshold Either a <code><a href="class-LoggerLevel.html">LoggerLevel</a></code> object or a string equivalent.</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						LoggerOptionConverter::toLevel()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isAsSevereAsThreshold" id="_isAsSevereAsThreshold">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isAsSevereAsThreshold">#</a>
+		<code><a href="source-class-LoggerAppender.html#235-249" title="Go to source code">isAsSevereAsThreshold</a>( <span><code><a href="class-LoggerLevel.html">LoggerLevel</a></code> <var>$level</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks whether the message level is below the appender's threshold.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks whether the message level is below the appender's threshold.</p>
+
+<p>If there is no threshold set, then the return value is always
+<i>true</i>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$level</var></dt>
+					<dd><code><code><a href="class-LoggerLevel.html">LoggerLevel</a></code></code><br>$level</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>Returns true if level is greater or equal than threshold, or if the threshold is
+not set. Otherwise returns false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="activateOptions" id="_activateOptions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateOptions">#</a>
+		<code><a href="source-class-LoggerAppender.html#251-259" title="Go to source code">activateOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Prepares the appender for logging.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepares the appender for logging.</p>
+
+<p>Derived appenders should override this method if option structure requires
+it.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="append" id="_append">
+
+		<td class="attributes"><code>
+			abstract protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_append">#</a>
+		<code><a href="source-class-LoggerAppender.html#261-268" title="Go to source code">append</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Forwards the logging event to the destination.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Forwards the logging event to the destination.</p>
+
+<p>Derived appenders should implement this method to perform actual logging.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-LoggerAppender.html#270-278" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Releases any resources allocated by the appender.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Releases any resources allocated by the appender.</p>
+
+<p>Derived appenders should override this method to perform proper closing
+procedures.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="warn" id="_warn">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_warn">#</a>
+		<code><a href="source-class-LoggerAppender.html#280-284" title="Go to source code">warn</a>( <span>mixed <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Triggers a warning for this logger with the given message.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Triggers a warning for this logger with the given message.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerConfigurable.html#_warn">LoggerConfigurable::warn()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerConfigurable.html#methods">LoggerConfigurable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerConfigurable.html#_setBoolean">setBoolean()</a>, 
+			<a href="class-LoggerConfigurable.html#_setFileSize">setFileSize()</a>, 
+			<a href="class-LoggerConfigurable.html#_setInteger">setInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setLevel">setLevel()</a>, 
+			<a href="class-LoggerConfigurable.html#_setNumeric">setNumeric()</a>, 
+			<a href="class-LoggerConfigurable.html#_setPositiveInteger">setPositiveInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setString">setString()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="closed" id="$closed">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#29-34" title="Go to source code"><var>$closed</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$closed" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Set to true when the appender is closed. A closed appender will not accept
+any logging requests.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set to true when the appender is closed. A closed appender will not accept
+any logging requests.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter" id="$filter">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerFilter.html">LoggerFilter</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#36-40" title="Go to source code"><var>$filter</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$filter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The first filter in the filter chain.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The first filter in the filter chain.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="layout" id="$layout">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerLayout.html">LoggerLayout</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#42-47" title="Go to source code"><var>$layout</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$layout" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The appender's layout. Can be null if the appender does not use a layout.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The appender's layout. Can be null if the appender does not use a layout.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="name" id="$name">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#49-53" title="Go to source code"><var>$name</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Appender name. Used by other components to identify this appender.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Appender name. Used by other components to identify this appender.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="threshold" id="$threshold">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-LoggerLevel.html">LoggerLevel</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#55-60" title="Go to source code"><var>$threshold</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$threshold" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Appender threshold level. Events whose level is below the threshold will not
+be logged.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Appender threshold level. Events whose level is below the threshold will not
+be logged.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="requiresLayout" id="$requiresLayout">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerAppender.html#62-70" title="Go to source code"><var>$requiresLayout</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$requiresLayout" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Set to true if the appender requires a layout.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set to true if the appender requires a layout.</p>
+
+<p>True by default, appenders which do not use a layout should override this
+property to false.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

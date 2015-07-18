@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerUtils | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li class="active"><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerFormattingInfo.html">LoggerFormattingInfo</a></li>
+				<li><a href="class-LoggerOptionConverter.html">LoggerOptionConverter</a></li>
+				<li><a href="class-LoggerPatternConverter.html">LoggerPatternConverter</a></li>
+				<li><a href="class-LoggerPatternParser.html">LoggerPatternParser</a></li>
+				<li class="active"><a href="class-LoggerUtils.html">LoggerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.helpers.html" title="Summary of log4php\helpers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerUtils</h1>
+
+
+	<div class="description">
+	
+<p>Contains various helper methods.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.helpers.html">helpers</a><br />
+
+				<b>Since:</b>
+				2.3<br />
+		<b>Located at</b> <a href="source-class-LoggerUtils.html#21-122" title="Go to source code">helpers/LoggerUtils.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="tokenizeClassName" id="_tokenizeClassName">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tokenizeClassName">#</a>
+		<code><a href="source-class-LoggerUtils.html#30-53" title="Go to source code">tokenizeClassName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Splits a fully qualified class name into fragments delimited by the namespace
+separator ().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Splits a fully qualified class name into fragments delimited by the namespace
+separator ().</p>
+
+<p>For backward compatibility, a dot (.) can be used as a delimiter as well.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Class name split into fragments.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shortenClassName" id="_shortenClassName">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shortenClassName">#</a>
+		<code><a href="source-class-LoggerUtils.html#55-121" title="Go to source code">shortenClassName</a>( <span>string <var>$name</var></span>, <span>integer <var>$length</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Attempts to shorten the given class name to the desired length.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attempts to shorten the given class name to the desired length.</p>
+
+<p>This is done by separating the class name into fragments (delimited by \ or
+.) and trimming individual fragments, starting with the left, until desired
+length has been reached.</p>
+
+<p>The final fragment (i.e. class name) will never be shortened so the result
+may still be longer than given length.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The (qualified) class name.</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length The length to shorten to. If null or 0 is given, the name will be
+returned without shortening.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerConfiguratorDefault | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Logger.html">Logger</a></li>
+				<li><a href="class-LoggerAppender.html">LoggerAppender</a></li>
+				<li><a href="class-LoggerAppenderPool.html">LoggerAppenderPool</a></li>
+				<li><a href="class-LoggerAutoloader.html">LoggerAutoloader</a></li>
+				<li><a href="class-LoggerConfigurable.html">LoggerConfigurable</a></li>
+				<li class="active"><a href="class-LoggerConfiguratorDefault.html">LoggerConfiguratorDefault</a></li>
+				<li><a href="class-LoggerFilter.html">LoggerFilter</a></li>
+				<li><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></li>
+				<li><a href="class-LoggerLayout.html">LoggerLayout</a></li>
+				<li><a href="class-LoggerLevel.html">LoggerLevel</a></li>
+				<li><a href="class-LoggerLocationInfo.html">LoggerLocationInfo</a></li>
+				<li><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></li>
+				<li><a href="class-LoggerMDC.html">LoggerMDC</a></li>
+				<li><a href="class-LoggerNDC.html">LoggerNDC</a></li>
+				<li><a href="class-LoggerReflectionUtils.html">LoggerReflectionUtils</a></li>
+				<li><a href="class-LoggerRoot.html">LoggerRoot</a></li>
+				<li><a href="class-LoggerThrowableInformation.html">LoggerThrowableInformation</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-LoggerConfigurator.html">LoggerConfigurator</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-LoggerException.html">LoggerException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.html" title="Summary of log4php"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerConfiguratorDefault</h1>
+
+
+	<div class="description">
+	
+<p>Default implementation of the logger configurator.</p>
+
+<p>Configures log4php based on a provided configuration file or array.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>LoggerConfiguratorDefault</span></b>			
+			 implements 
+				<a href="class-LoggerConfigurator.html"><span>LoggerConfigurator</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a><br />
+
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br />
+				<b>Version:</b>
+				$Revision: 1394956 $<br />
+				<b>Since:</b>
+				2.2<br />
+		<b>Located at</b> <a href="source-class-LoggerConfiguratorDefault.html#21-477" title="Go to source code">configurators/LoggerConfiguratorDefault.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="configure" id="_configure">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configure">#</a>
+		<code><a href="source-class-LoggerConfiguratorDefault.html#66-85" title="Go to source code">configure</a>( <span><code><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></code> <var>$hierarchy</var></span>, <span>string|array <var>$input</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Configures log4php based on the given configuration. The input can either be
+a path to the config file, or a PHP array holding the configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configures log4php based on the given configuration. The input can either be
+a path to the config file, or a PHP array holding the configuration.</p>
+
+<p>If no configuration is given, or if the given configuration cannot be parsed
+for whatever reason, a warning will be issued, and log4php will use the default
+configuration contained in $defaultConfiguration.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$hierarchy</var></dt>
+					<dd><code><code><a href="class-LoggerHierarchy.html">LoggerHierarchy</a></code></code><br>$hierarchy The hierarchy on which to perform the configuration.</dd>
+					<dt><var>$input</var></dt>
+					<dd><code>string|array</code><br>$input Either path to the config file or the configuration as an array. If not
+set, default configuration will be used.</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-LoggerConfigurator.html#_configure">LoggerConfigurator::configure()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-LoggerConfiguratorDefault.html#87-128" title="Go to source code">parse</a>( <span>string|array <var>$input</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Parses the given configuration and returns the parsed configuration as a PHP
+array. Does not perform any configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parses the given configuration and returns the parsed configuration as a PHP
+array. Does not perform any configuration.</p>
+
+<p>If no configuration is given, or if the given configuration cannot be parsed
+for whatever reason, a warning will be issued, and the default configuration
+will be returned ($defaultConfiguration).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>string|array</code><br>$input Either path to the config file or the configuration as an array. If not
+set, default configuration will be used.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>The parsed configuration.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultConfiguration" id="_getDefaultConfiguration">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultConfiguration">#</a>
+		<code><a href="source-class-LoggerConfiguratorDefault.html#130-136" title="Go to source code">getDefaultConfiguration</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the default log4php configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the default log4php configuration.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="FORMAT_XML" id="FORMAT_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerConfiguratorDefault.html#33-34" title="Go to source code"><b>FORMAT_XML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'xml'</span></code></td>
+		<td class="description"><div>
+			<a href="#FORMAT_XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>XML configuration file format.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>XML configuration file format.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FORMAT_PHP" id="FORMAT_PHP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerConfiguratorDefault.html#36-37" title="Go to source code"><b>FORMAT_PHP</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'php'</span></code></td>
+		<td class="description"><div>
+			<a href="#FORMAT_PHP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>PHP configuration file format.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>PHP configuration file format.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FORMAT_INI" id="FORMAT_INI">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerConfiguratorDefault.html#39-40" title="Go to source code"><b>FORMAT_INI</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'ini'</span></code></td>
+		<td class="description"><div>
+			<a href="#FORMAT_INI" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>INI (properties) configuration file format.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>INI (properties) configuration file format.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

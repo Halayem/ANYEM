@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LoggerLayoutXml | Apache log4php</title>
+
+	<script type="text/javascript" src="resources/combined.js?238209907"></script>
+	<script type="text/javascript" src="elementlist.js?4055067042"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-26177991-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-log4php.html">log4php<span></span></a>
+						<ul>
+				<li><a href="package-log4php.appenders.html">appenders</a>
+						</li>
+				<li><a href="package-log4php.configurators.html">configurators</a>
+						</li>
+				<li><a href="package-log4php.filters.html">filters</a>
+						</li>
+				<li><a href="package-log4php.helpers.html">helpers</a>
+						</li>
+				<li class="active"><a href="package-log4php.layouts.html">layouts</a>
+						</li>
+				<li><a href="package-log4php.pattern.html">pattern</a>
+						</li>
+				<li><a href="package-log4php.renderers.html">renderers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LoggerLayoutHtml.html">LoggerLayoutHtml</a></li>
+				<li><a href="class-LoggerLayoutPattern.html">LoggerLayoutPattern</a></li>
+				<li><a href="class-LoggerLayoutSerialized.html">LoggerLayoutSerialized</a></li>
+				<li><a href="class-LoggerLayoutSimple.html">LoggerLayoutSimple</a></li>
+				<li class="active"><a href="class-LoggerLayoutXml.html">LoggerLayoutXml</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-log4php.layouts.html" title="Summary of log4php\layouts"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LoggerLayoutXml</h1>
+
+
+	<div class="description">
+	
+<p>The output of the LoggerXmlLayout consists of a series of log4php:event
+elements.</p>
+
+<p>Configurable parameters:</p>
+
+<ul>
+	<li><code><a href="class-LoggerLayoutXml.html#$locationInfo">LoggerLayoutXml::<var>$locationInfo</var></a></code> - If set to true then the file name and line number of
+	the origin of the log statement will be included in output.</li>
+
+	<li><code><a href="class-LoggerLayoutXml.html#$log4jNamespace">LoggerLayoutXml::<var>$log4jNamespace</var></a></code> - If set to true then log4j namespace will be used
+	instead of log4php namespace. This can be usefull when using log viewers which
+	can only parse the log4j namespace such as Apache Chainsaw.</li>
+</ul>
+
+<p>It does not output a complete well-formed XML file. The output is designed to
+be included as an external entity in a separate file to form a correct XML
+file.</p>
+
+<p>Example:</p>
+
+<p>{@example ../../examples/php/layout_xml.php 19}<br />
+</p>
+
+<p>{@example ../../examples/resources/layout_xml.properties 18}<br />
+</p>
+
+<p>The above would print:</p>
+
+<pre>
+&lt;log4php:eventSet xmlns:log4php=&quot;http://logging.apache.org/log4php/&quot; version=&quot;0.3&quot; includesLocationInfo=&quot;true&quot;&gt;
+        &lt;log4php:event logger=&quot;root&quot; level=&quot;INFO&quot; thread=&quot;13802&quot; timestamp=&quot;1252456226491&quot;&gt;
+                &lt;log4php:message&gt;&lt;![CDATA[Hello World!]]&gt;&lt;/log4php:message&gt;
+                &lt;log4php:locationInfo class=&quot;main&quot; file=&quot;examples/php/layout_xml.php&quot; line=&quot;6&quot; method=&quot;main&quot; /&gt;
+        &lt;/log4php:event&gt;
+&lt;/log4php:eventSet&gt;
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-LoggerConfigurable.html"><span>LoggerConfigurable</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-LoggerLayout.html"><span>LoggerLayout</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>LoggerLayoutXml</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-log4php.html">log4php</a>\<a href="package-log4php.layouts.html">layouts</a><br />
+
+				<b>Version:</b>
+				$Revision: 1213283 $<br />
+		<b>Located at</b> <a href="source-class-LoggerLayoutXml.html#21-209" title="Go to source code">layouts/LoggerLayoutXml.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="activateOptions" id="_activateOptions">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateOptions">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#88-96" title="Go to source code">activateOptions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Activates options for this layout. Override this method if you have options
+to be activated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Activates options for this layout. Override this method if you have options
+to be activated.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerLayout.html#_activateOptions">LoggerLayout::activateOptions()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeader" id="_getHeader">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeader">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#98-107" title="Go to source code">getHeader</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerLayout.html#_getHeader">LoggerLayout::getHeader()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format" id="_format">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#109-157" title="Go to source code">format</a>( <span><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Formats a <code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> in conformance with the log4php.dtd.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Formats a <code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code> in conformance with the log4php.dtd.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-LoggerLoggingEvent.html">LoggerLoggingEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerLayout.html#_format">LoggerLayout::format()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFooter" id="_getFooter">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFooter">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#159-164" title="Go to source code">getFooter</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LoggerLayout.html#_getFooter">LoggerLayout::getFooter()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLocationInfo" id="_getLocationInfo">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLocationInfo">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#167-173" title="Go to source code">getLocationInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Whether or not file name and line number will be included in the output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Whether or not file name and line number will be included in the output.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLocationInfo" id="_setLocationInfo">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLocationInfo">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#175-184" title="Go to source code">setLocationInfo</a>( <span>mixed <var>$flag</var></span> )</code>
+
+		<div class="description short">
+			
+<p>The <code><a href="class-LoggerLayoutXml.html#$locationInfo">LoggerLayoutXml::<var>$locationInfo</var></a></code> option takes a boolean value. By default, it is set
+to false which means there will be no location information output by this
+layout. If the the option is set to true, then the file name and line number of
+the statement at the origin of the log statement will be output.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The <code><a href="class-LoggerLayoutXml.html#$locationInfo">LoggerLayoutXml::<var>$locationInfo</var></a></code> option takes a boolean value. By default, it is set
+to false which means there will be no location information output by this
+layout. If the the option is set to true, then the file name and line number of
+the statement at the origin of the log statement will be output.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLog4jNamespace" id="_getLog4jNamespace">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLog4jNamespace">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#186-191" title="Go to source code">getLog4jNamespace</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLog4jNamespace" id="_setLog4jNamespace">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLog4jNamespace">#</a>
+		<code><a href="source-class-LoggerLayoutXml.html#193-198" title="Go to source code">setLog4jNamespace</a>( <span>boolean <var>$flag</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$flag</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerLayout.html#methods">LoggerLayout</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerLayout.html#_getContentType">getContentType()</a>, 
+			<a href="class-LoggerLayout.html#_warn">warn()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LoggerConfigurable.html#methods">LoggerConfigurable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LoggerConfigurable.html#_setBoolean">setBoolean()</a>, 
+			<a href="class-LoggerConfigurable.html#_setFileSize">setFileSize()</a>, 
+			<a href="class-LoggerConfigurable.html#_setInteger">setInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setLevel">setLevel()</a>, 
+			<a href="class-LoggerConfigurable.html#_setNumeric">setNumeric()</a>, 
+			<a href="class-LoggerConfigurable.html#_setPositiveInteger">setPositiveInteger()</a>, 
+			<a href="class-LoggerConfigurable.html#_setString">setString()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="LOG4J_NS_PREFIX" id="LOG4J_NS_PREFIX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#57" title="Go to source code"><b>LOG4J_NS_PREFIX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'log4j'</span></code></td>
+		<td class="description"><div>
+			<a href="#LOG4J_NS_PREFIX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LOG4J_NS" id="LOG4J_NS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#58" title="Go to source code"><b>LOG4J_NS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'http://jakarta.apache.org/log4j/'</span></code></td>
+		<td class="description"><div>
+			<a href="#LOG4J_NS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LOG4PHP_NS_PREFIX" id="LOG4PHP_NS_PREFIX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#60" title="Go to source code"><b>LOG4PHP_NS_PREFIX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'log4php'</span></code></td>
+		<td class="description"><div>
+			<a href="#LOG4PHP_NS_PREFIX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LOG4PHP_NS" id="LOG4PHP_NS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#61" title="Go to source code"><b>LOG4PHP_NS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'http://logging.apache.org/log4php/'</span></code></td>
+		<td class="description"><div>
+			<a href="#LOG4PHP_NS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CDATA_START" id="CDATA_START">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#63" title="Go to source code"><b>CDATA_START</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'&lt;![CDATA['</span></code></td>
+		<td class="description"><div>
+			<a href="#CDATA_START" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CDATA_END" id="CDATA_END">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#64" title="Go to source code"><b>CDATA_END</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">']]&gt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#CDATA_END" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CDATA_PSEUDO_END" id="CDATA_PSEUDO_END">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#65" title="Go to source code"><b>CDATA_PSEUDO_END</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">']]&amp;gt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#CDATA_PSEUDO_END" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CDATA_EMBEDDED_END" id="CDATA_EMBEDDED_END">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-LoggerLayoutXml.html#66" title="Go to source code"><b>CDATA_EMBEDDED_END</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">']]&gt;]]&amp;gt;&lt;![CDATA['</span></code></td>
+		<td class="description"><div>
+			<a href="#CDATA_EMBEDDED_END" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="locationInfo" id="$locationInfo">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLayoutXml.html#68-73" title="Go to source code"><var>$locationInfo</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$locationInfo" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>If set to true then the file name and line number of the origin of the log
+statement will be output.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>If set to true then the file name and line number of the origin of the log
+statement will be output.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="log4jNamespace" id="$log4jNamespace">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLayoutXml.html#75-80" title="Go to source code"><var>$log4jNamespace</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$log4jNamespace" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>If set to true, log4j namespace will be used instead of the log4php
+namespace.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>If set to true, log4j namespace will be used instead of the log4php
+namespace.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="namespace" id="$namespace">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLayoutXml.html#82-83" title="Go to source code"><var>$namespace</var></a>
+		</td>
+		<td class="value"><code><code><a href="class-LoggerLayoutXml.html#LOG4PHP_NS">LoggerLayoutXml::<b>LOG4PHP_NS</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="#$namespace" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The namespace in use.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The namespace in use.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="namespacePrefix" id="$namespacePrefix">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LoggerLayoutXml.html#85-86" title="Go to source code"><var>$namespacePrefix</var></a>
+		</td>
+		<td class="value"><code><code><a href="class-LoggerLayoutXml.html#LOG4PHP_NS_PREFIX">LoggerLayoutXml::<b>LOG4PHP_NS_PREFIX</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="#$namespacePrefix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The namespace prefix in use</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The namespace prefix in use</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Apache log4php API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
