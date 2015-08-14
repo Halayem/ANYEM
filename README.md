@@ -1,7 +1,8 @@
-`ANYEM : PHP Synchronized Data Structure Server
+```
+ANYEM : PHP Synchronized Data Structure Server
 
- ==============================================`
-
+ ==============================================
+```
 1. INTRODUCTION
 ---------------
 **ANYEM** is an open source project, written in *PHP*.
@@ -72,8 +73,11 @@ Thats all for the server :)
      `ANYEM_CLIENT/ANYEM_SHARED/config` 
      and keep the same file name
   2. Go to `ANYEM_CLIENT/config` and edit `anyem_config.properties`
-     `address`            : designates the ANYEM_SERVER address
+  
+     `address`            : designates the ANYEM_SERVER address;
+
      `defaultMaxAttempt`  : default value that designates the maximum number of attempts that the client can made to reserve a variable,vthis value can be changed by code;
+     
      `defaultDelayAttempt`: default value that designates the delay in µSeconds between two reservation attempts, this value can be changed by code;
 
 3. USAGE (EXAMPLES)
